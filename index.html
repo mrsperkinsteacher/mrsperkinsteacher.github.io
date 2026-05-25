@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mrs Perkins Teacher</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --blush:#f2d7d5;--sage:#c8d8c8;--sky:#c8d8e8;--lavender:#d8cce8;--peach:#f0dcc8;
+  --warm-white:#faf7f4;--soft-text:#5a4a5a;--mid-text:#8a7a8a;--dark-text:#3a2a3a;
+  --accent:#b89ab0;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Source Sans 3',sans-serif;background:var(--warm-white);color:var(--dark-text);min-height:100vh;}
+
+/* Hero */
+.hero{
+  min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:3rem 2rem;text-align:center;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,var(--blush) 0%,var(--peach) 30%,var(--lavender) 65%,var(--sky) 100%);
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 30% 40%,rgba(255,255,255,0.4) 0%,transparent 60%),
+             radial-gradient(ellipse at 75% 70%,rgba(255,255,255,0.3) 0%,transparent 50%);
+}
+.hero-inner{position:relative;z-index:1;max-width:680px;}
+.eyebrow{font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:3px;margin-bottom:1.5rem;}
+.title{font-family:'Playfair Display',serif;font-size:clamp(52px,11vw,130px);font-weight:700;color:var(--dark-text);line-height:0.9;margin-bottom:0.3rem;letter-spacing:-0.01em;}
+.title-sub{font-family:'Playfair Display',serif;font-size:clamp(18px,4vw,36px);font-style:italic;color:var(--soft-text);letter-spacing:0.04em;margin-bottom:2rem;font-weight:500;}
+.divider{width:50px;height:2px;background:linear-gradient(90deg,var(--accent),transparent);border-radius:2px;margin:0 auto 2rem;}
+.lead{font-size:16px;color:var(--soft-text);max-width:420px;margin:0 auto 3rem;line-height:1.75;font-weight:300;}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;width:100%;max-width:680px;}
+.card{
+  background:rgba(255,255,255,0.65);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.8);border-radius:16px;
+  padding:1.75rem;text-decoration:none;transition:transform 0.25s,box-shadow 0.25s,background 0.25s;
+  display:block;text-align:left;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(90,60,90,0.12);background:rgba(255,255,255,0.85);}
+.card-tag{font-size:10px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;}
+.card-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--dark-text);margin-bottom:6px;}
+.card-desc{font-size:13px;color:var(--mid-text);line-height:1.6;font-weight:300;}
+.card-link{font-size:12px;color:var(--accent);font-weight:600;margin-top:14px;display:block;letter-spacing:0.5px;}
+
+/* Coming soon card */
+.card-soon{opacity:0.5;cursor:default;}
+.card-soon:hover{transform:none;box-shadow:none;}
+
+footer{padding:2rem;text-align:center;font-size:11px;color:var(--mid-text);letter-spacing:1px;}
+
+@media(max-width:500px){.cards{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Welcome</p>
+    <h1 class="title">Mrs Perkins</h1>
+    <p class="title-sub">Teacher</p>
+    <div class="divider"></div>
+    <p class="lead">Find your subject below for lessons, resources and course information.</p>
+    <div class="cards">
+      <a class="card" href="https://mrsperkinsteacher.github.io/geography/">
+        <p class="card-tag">Stage 5 and Stage 6</p>
+        <h2 class="card-title">Geography</h2>
+        <p class="card-desc">Lessons, syllabus, SDGs, current events and resources.</p>
+        <span class="card-link">Visit &rarr;</span>
+      </a>
+      <div class="card card-soon">
+        <p class="card-tag">Coming soon</p>
+        <h2 class="card-title">More subjects</h2>
+        <p class="card-desc">Additional subject pages will appear here.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>Mrs Perkins &middot; Educational use only</footer>
+</body>
+</html>
