@@ -3,119 +3,78 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mrs Perkins Teacher</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --navy: #0d1b2a;
-  --amber: #c8a951;
-  --yellow: #f5c842;
-  --orange: #e8832a;
-  --teal-mid: #2a9d8f;
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --blush:#f2d7d5;--sage:#c8d8c8;--sky:#c8d8e8;--lavender:#d8cce8;--peach:#f0dcc8;
+  --warm-white:#faf7f4;--soft-text:#5a4a5a;--mid-text:#8a7a8a;--dark-text:#3a2a3a;
+  --accent:#b89ab0;
 }
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
-  background: var(--navy);
-  color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
+html{scroll-behavior:smooth;}
+body{font-family:'Source Sans 3',sans-serif;background:var(--warm-white);color:var(--dark-text);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;}
+.eyebrow{font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:3px;margin-bottom:1.5rem;}
+.title{font-family:'Copperplate','Copperplate Gothic Light','Copperplate Gothic Bold',serif;font-size:clamp(48px,10vw,120px);font-weight:700;color:var(--dark-text);line-height:0.9;margin-bottom:0.3rem;letter-spacing:0.02em;}
+.title-sub{font-family:'Playfair Display',serif;font-size:clamp(18px,4vw,36px);font-style:italic;color:var(--soft-text);letter-spacing:0.04em;margin-bottom:2rem;font-weight:500;}
+.divider{width:50px;height:2px;background:linear-gradient(90deg,var(--accent),transparent);border-radius:2px;margin:0 auto 2rem;}
+.lead{font-size:16px;color:var(--soft-text);max-width:420px;margin:0 auto 3rem;line-height:1.75;font-weight:300;}
+.hero{
+  background:linear-gradient(135deg,var(--blush) 0%,var(--peach) 30%,var(--lavender) 65%,var(--sky) 100%);
+  min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:3rem 2rem;position:relative;overflow:hidden;width:100%;max-width:100%;
 }
-.home-title {
-  font-family: 'Copperplate', 'Copperplate Gothic Light', serif;
-  font-size: clamp(48px, 10vw, 120px);
-  font-weight: 700;
-  color: var(--amber);
-  line-height: 0.95;
-  margin-bottom: 16px;
-  letter-spacing: 0.02em;
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 30% 40%,rgba(255,255,255,0.4) 0%,transparent 60%),
+             radial-gradient(ellipse at 75% 70%,rgba(255,255,255,0.3) 0%,transparent 50%);
 }
-.home-sub {
-  font-size: 16px;
-  color: rgba(255,255,255,0.6);
-  margin-bottom: 2rem;
+.hero-inner{position:relative;z-index:1;max-width:960px;width:100%;text-align:center;}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;width:100%;max-width:960px;margin:0 auto;}
+.card{
+  background:rgba(255,255,255,0.65);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.8);border-radius:16px;
+  padding:1.75rem;text-decoration:none;transition:transform 0.25s,box-shadow 0.25s,background 0.25s;
+  display:block;text-align:left;
 }
-.home-divider {
-  width: 60px; height: 3px;
-  background: linear-gradient(90deg, var(--yellow), var(--orange));
-  border-radius: 2px;
-  margin: 0 auto 2.5rem;
-}
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  width: 100%;
-  max-width: 860px;
-}
-.card {
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 10px;
-  padding: 20px 18px;
-  text-decoration: none;
-  color: white;
-  text-align: left;
-  transition: background 0.2s, border-color 0.2s;
-}
-.card:hover {
-  background: rgba(255,255,255,0.13);
-  border-color: var(--teal-mid);
-}
-.card-title {
-  font-size: 15px;
-  font-weight: 700;
-  margin-bottom: 5px;
-  color: var(--amber);
-}
-.card-desc {
-  font-size: 12px;
-  color: rgba(255,255,255,0.55);
-  line-height: 1.5;
-}
-.footer {
-  margin-top: 3rem;
-  font-size: 11px;
-  color: rgba(255,255,255,0.2);
-  letter-spacing: 1px;
-}
-@media (max-width: 600px) {
-  .cards { grid-template-columns: 1fr; }
-}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(90,60,90,0.12);background:rgba(255,255,255,0.85);}
+.card-tag{font-size:10px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;}
+.card-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--dark-text);margin-bottom:6px;}
+.card-desc{font-size:13px;color:var(--mid-text);line-height:1.6;font-weight:300;}
+.card-link{font-size:12px;color:var(--accent);font-weight:600;margin-top:14px;display:block;letter-spacing:0.5px;}
+footer{padding:2rem;text-align:center;font-size:11px;color:var(--mid-text);letter-spacing:1px;position:relative;z-index:1;}
+@media(max-width:640px){.cards{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
-
-<h1 class="home-title">Mrs Perkins</h1>
-<p class="home-sub">Teacher</p>
-<div class="home-divider"></div>
-
-<p style="font-size:14px;color:rgba(255,255,255,0.5);margin-bottom:1.5rem;">Find your subject below for lessons, resources and course information.</p>
-
-<div class="cards">
-
-  <a class="card" href="https://mrsperkinsteacher.github.io/geography/">
-    <div class="card-title">Geography</div>
-    <div class="card-desc">Stage 5 and Stage 6 Geography — lessons, syllabus, SDGs, current events and resources.</div>
-  </a>
-
-  <a class="card" href="https://mrsperkinsteacher.github.io/business/">
-    <div class="card-title">Business Studies</div>
-    <div class="card-desc">Year 11 Preliminary Business Studies — worksheets, slides, revision resources and assessment information.</div>
-  </a>
-
-  <a class="card" href="https://mrsperkinsteacher.github.io/CLS/">
-    <div class="card-title">Christian Life Studies</div>
-    <div class="card-desc">All years — faith, values and how we live well with one another.</div>
-  </a>
-
+<div class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Welcome</p>
+    <h1 class="title">Mrs Perkins</h1>
+    <p class="title-sub">Teacher</p>
+    <div class="divider"></div>
+    <p class="lead">Find your subject below for lessons, resources and course information.</p>
+    <div class="cards">
+      <a class="card" href="https://mrsperkinsteacher.github.io/geography/">
+        <p class="card-tag">Stage 5 and Stage 6</p>
+        <h2 class="card-title">Geography</h2>
+        <p class="card-desc">Lessons, syllabus, SDGs, current events and resources.</p>
+        <span class="card-link">Visit &rarr;</span>
+      </a>
+      <a class="card" href="https://mrsperkinsteacher.github.io/business/">
+        <p class="card-tag">Year 11 Preliminary</p>
+        <h2 class="card-title">Business Studies</h2>
+        <p class="card-desc">Worksheets, slides, revision resources and assessment information.</p>
+        <span class="card-link">Visit &rarr;</span>
+      </a>
+      <a class="card" href="https://mrsperkinsteacher.github.io/CLS/">
+        <p class="card-tag">All years</p>
+        <h2 class="card-title">Christian Life Studies</h2>
+        <p class="card-desc">Faith, values and how we live well with one another.</p>
+        <span class="card-link">Visit &rarr;</span>
+      </a>
+    </div>
+  </div>
+  <footer>Mrs Perkins &middot; Educational use only</footer>
 </div>
-
-<div class="footer">Mrs Perkins · Educational use only</div>
-
 </body>
 </html>
