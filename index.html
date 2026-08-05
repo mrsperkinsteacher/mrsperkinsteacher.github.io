@@ -37,8 +37,9 @@ body{font-family:'Source Sans 3',sans-serif;background:var(--warm-white);color:v
   background:radial-gradient(ellipse at 30% 40%,rgba(255,255,255,0.4) 0%,transparent 60%),
              radial-gradient(ellipse at 75% 70%,rgba(255,255,255,0.3) 0%,transparent 50%);
 }
-.hero-inner{position:relative;z-index:1;max-width:960px;width:100%;text-align:center;}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;width:100%;max-width:960px;margin:0 auto;}
+.hero-inner{position:relative;z-index:1;max-width:1080px;width:100%;text-align:center;}
+.section-label{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--mid-text);margin:2.2rem 0 0.9rem;text-align:left;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;width:100%;max-width:1080px;margin:0 auto;}
 .card{
   background:rgba(255,255,255,0.65);backdrop-filter:blur(12px);
   border:1px solid rgba(255,255,255,0.8);border-radius:16px;
@@ -50,6 +51,8 @@ body{font-family:'Source Sans 3',sans-serif;background:var(--warm-white);color:v
 .card-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--dark-text);margin-bottom:8px;}
 .card-desc{font-size:13px;color:var(--mid-text);line-height:1.7;font-weight:300;}
 .card-link{font-size:12px;color:var(--accent);font-weight:600;margin-top:14px;display:block;letter-spacing:0.5px;}
+.card.soon{opacity:.55;cursor:default;}
+.card.soon .card-link{color:var(--mid-text);}
 footer{padding:2rem;text-align:center;font-size:11px;color:var(--mid-text);letter-spacing:1px;position:relative;z-index:1;}
 @media(max-width:640px){.cards{grid-template-columns:1fr;}}
 </style>
@@ -62,17 +65,41 @@ footer{padding:2rem;text-align:center;font-size:11px;color:var(--mid-text);lette
     <p class="title-sub">Teacher</p>
     <div class="divider"></div>
     <p class="lead">Find your subject below for lessons, resources and course information.</p>
+
+    <p class="section-label">Geography</p>
     <div class="cards">
-      <a class="card" href="https://mrsperkinsteacher.github.io/geography/">
-        <p class="card-tag">Stage 4, 5 and 6</p>
-        <h2 class="card-title">Geography</h2>
-        <p class="card-desc">Explore the world from local landscapes to global issues. Lessons, maps, current events and syllabus resources across all year groups.</p>
-        <span class="card-link">Visit Geography &rarr;</span>
+      <a class="card" href="https://mrsperkinsteacher.github.io/stage4geo/">
+        <p class="card-tag">Year 7 &amp; 8</p>
+        <h2 class="card-title">Stage 4 Geography</h2>
+        <p class="card-desc">Landscapes and landforms, liveability, water in the world, and interconnections and trade.</p>
+        <span class="card-link">Visit Stage 4 &rarr;</span>
       </a>
+      <a class="card" href="https://mrsperkinsteacher.github.io/stage5geo/">
+        <p class="card-tag">Year 9 &amp; 10</p>
+        <h2 class="card-title">Stage 5 Geography</h2>
+        <p class="card-desc">Changing places, environmental change and management, and human wellbeing.</p>
+        <span class="card-link">Visit Stage 5 &rarr;</span>
+      </a>
+      <div class="card soon">
+        <p class="card-tag">Year 11 &amp; 12</p>
+        <h2 class="card-title">Stage 6 Geography</h2>
+        <p class="card-desc">Weekly lessons and resources for Geography electives. Site under construction.</p>
+        <span class="card-link">Coming soon</span>
+      </div>
+      <a class="card" href="https://mrsperkinsteacher.github.io/geography/">
+        <p class="card-tag">SDGs &middot; Sources &middot; Electives</p>
+        <h2 class="card-title">Geography Resources</h2>
+        <p class="card-desc">Sustainable Development Goals, current affairs, reliable sources and Stage 6 elective pages.</p>
+        <span class="card-link">Visit Geography Resources &rarr;</span>
+      </a>
+    </div>
+
+    <p class="section-label">Other subjects</p>
+    <div class="cards">
       <a class="card" href="https://mrsperkinsteacher.github.io/business/">
-        <p class="card-tag">Year 11 Preliminary</p>
+        <p class="card-tag">Year 11 &amp; 12</p>
         <h2 class="card-title">Business Studies</h2>
-        <p class="card-desc">Weekly lessons, worksheets, slides and revision resources for Preliminary Business Studies students.</p>
+        <p class="card-desc">Weekly lessons, worksheets, slides and revision resources for Business Studies students.</p>
         <span class="card-link">Visit Business Studies &rarr;</span>
       </a>
       <a class="card" href="https://mrsperkinsteacher.github.io/CLS/">
@@ -81,6 +108,12 @@ footer{padding:2rem;text-align:center;font-size:11px;color:var(--mid-text);lette
         <p class="card-desc">Exploring faith, values and how we live well with one another. Resources and activities for every year group.</p>
         <span class="card-link">Visit CLS &rarr;</span>
       </a>
+      <div class="card soon">
+        <p class="card-tag">All years</p>
+        <h2 class="card-title">Study Tips</h2>
+        <p class="card-desc">General study skills, revision strategies and exam preparation, for any subject.</p>
+        <span class="card-link">Coming soon</span>
+      </div>
     </div>
   </div>
   <footer>Mrs Perkins &middot; Educational use only</footer>
