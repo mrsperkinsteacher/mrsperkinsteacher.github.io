@@ -108,6 +108,20 @@ footer a { color:var(--lteal); text-decoration:none; }
 .chain-box li strong { font-weight:600; color:var(--navy); }
 @media (max-width:600px) { .tab-nav { position:static; } .tab-nav-inner { grid-template-columns:repeat(2,1fr) !important; } .tab-btn { font-size:13px; padding:8px 8px; } }
 .callout b { font-weight:600; color:var(--navy); }
+.grade-panels { display:flex; flex-direction:column; gap:14px; margin:14px 0 8px; }
+.grade-panel { display:flex; flex-direction:column; background:var(--white); border:1.5px solid var(--border); border-radius:12px; padding:18px 20px; }
+.grade-panel.c-panel { border-left:5px solid #f0a500; }
+.grade-panel.b-panel { border-left:5px solid var(--teal); }
+.grade-panel.a-panel { border-left:5px solid var(--clay); }
+.grade-badge { align-self:flex-start; border-radius:8px; padding:6px 14px; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:12px; }
+.grade-badge.c { background:#fff3cd; color:#7a4a00; border:1.5px solid #f0a500; }
+.grade-badge.b { background:#e8f4f0; color:#1a4a2f; border:1.5px solid var(--teal); }
+.grade-badge.a { background:#fdeae3; color:#c1502f; border:1.5px solid var(--clay); }
+.grade-panel p { font-size:15.5px; line-height:1.65; font-weight:300; margin-bottom:10px; }
+.grade-panel p:last-child { margin-bottom:0; }
+.example-label { font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+.label-example { font-style:italic; }
+@media (min-width:821px) { .tab-nav-inner { grid-template-columns:repeat(3,1fr); } }
 </style>
 </head>
 <body>
@@ -125,6 +139,7 @@ footer a { color:var(--lteal); text-decoration:none; }
     <button class="tab-btn active" onclick="switchTab('start', this)">Start here</button>
     <button class="tab-btn" onclick="switchTab('steps12', this)">Steps 1-2<br>Choose &amp; Investigate</button>
     <button class="tab-btn" onclick="switchTab('chat', this)">Your chat<br>Prompts 1-8</button>
+    <button class="tab-btn" onclick="switchTab('firstnations', this)">First Nations<br>&amp; Country</button>
     <button class="tab-btn" onclick="switchTab('checks', this)">Step 3<br>The four checks</button>
     <button class="tab-btn" onclick="switchTab('transcript', this)">Your AI transcript</button>
     <button class="tab-btn" onclick="switchTab('steps45', this)">Steps 4-5<br>Decide &amp; Submit</button>
@@ -265,7 +280,7 @@ footer a { color:var(--lteal); text-decoration:none; }
   </div>
   <div class="callout callout-tip">
     <strong>Next</strong>
-    Open the <a href="#" onclick="switchTab('chat', document.querySelectorAll('.tab-btn')[2]); return false;">Your chat</a> tab - it gives you the start of every prompt.
+    Open the <a href="#" onclick="switchTab('chat', document.querySelector('.tab-btn[onclick*=chat]')); return false;">Your chat</a> tab - it gives you the start of every prompt.
   </div>
 </section>
 
@@ -288,7 +303,7 @@ footer a { color:var(--lteal); text-decoration:none; }
     <tr><th style="width:9%">Prompt</th><th style="width:51%">Start it with...</th><th>What it's for</th></tr>
     <tr><td><strong>1</strong></td><td>Answer in under 150 words. Describe human wellbeing in [your country] for SDG [number]. Give me ...</td><td>Step 2 - the situation: facts with figures, indicators, one initiative</td></tr>
     <tr><td><strong>2</strong></td><td>Answer in under 150 words. Why does [something from Answer 1] ...</td><td>Step 2 - why it varies inside your country</td></tr>
-    <tr><td><strong>3</strong></td><td>Answer in under 150 words. How does this compare with ...</td><td>Step 2 - your Australian First Nations link</td></tr>
+    <tr><td><strong>3</strong></td><td>Answer in under 150 words. How does this compare with ...</td><td>Step 2 - your Australian First Nations link (see the <a href="#" onclick="switchTab('firstnations', document.querySelector('.tab-btn[onclick*=firstnations]')); return false;">First Nations &amp; Country</a> tab)</td></tr>
     <tr><td><strong>4</strong></td><td>Answer in under 150 words. Where did you get the figures in ...</td><td>Step 2 - the sources for Answer 1</td></tr>
     <tr class="row-active"><td><strong>STOP</strong></td><td colspan="2"><strong>Do Check 1 (Source Showdown, Appendix 1).</strong> Take a figure from Answer 1 and change it so it is false. Type your prediction in your transcript and in Appendix 2.</td></tr>
     <tr><td><strong>5</strong></td><td>Answer in under 150 words. ... (your false "fact" written as if it is true)</td><td>Check 2 - the trap</td></tr>
@@ -311,6 +326,100 @@ footer a { color:var(--lteal); text-decoration:none; }
   </div>
 </section>
 
+<!-- ================= FIRST NATIONS ================= -->
+<section class="tab-panel" id="firstnations">
+  <div class="part-heading">
+    <div class="part-number">FN</div>
+    <div class="part-title">
+      <h2>First Nations Peoples and Country</h2>
+      <p>Where it fits in your task, and how it lifts your mark.</p>
+    </div>
+  </div>
+
+  <div class="callout callout-alert">
+    <strong>This part is a must</strong>
+    At least one part of your task must look at Aboriginal and/or Torres Strait Islander wellbeing, including connection to and care for Country. Leave it out and you lose marks in more than one row of the rubric.
+  </div>
+
+  <div class="rubric-section">
+    <div class="rubric-section-title">Where it fits - step by step</div>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Step 1 - Choose your Australian link</h3><p>On your cover page, name your <strong>Australian link (First Nations focus)</strong>. Be specific, e.g. remote Aboriginal communities in the Northern Territory, or Torres Strait Islander communities.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Prompt 3 - ask the AI</h3><p>Prompt 3 is always your First Nations prompt. Ask how your SDG compares for Aboriginal and/or Torres Strait Islander Peoples. Examples are below.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Check 1 - check its figure</h3><p>Check at least one figure from Answer 3 against <strong>AIHW</strong>, <strong>Australian Indigenous HealthInfoNet</strong> or the <strong>Closing the Gap dashboard</strong>. It counts as one of your 5 Source Showdown claims.</p></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-body"><h3>Check 3 - whose voices are missing?</h3><p>After your bias pair (Prompts 6 and 7), ask: did either answer include Aboriginal and/or Torres Strait Islander voices, community-led programs or connection to Country? If not, that is a <strong>B</strong> on your transcript and a key point for Section 2.</p></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-body"><h3>Prompt 8+ - dig deeper (optional)</h3><p>You can keep asking about it in your follow-ups. See the follow-up ideas below.</p></div></div>
+      <div class="step"><div class="step-num">6</div><div class="step-body"><h3>Write it up</h3><p><strong>Section 2</strong> (whose voices are missing), and if it fits, <strong>Section 4</strong> - your initiative could be an Aboriginal community-controlled program, with its strengths AND limits.</p></div></div>
+    </div>
+  </div>
+
+  <div class="rubric-section">
+    <div class="rubric-section-title">Prompt 3 ideas - pick the one for your SDG</div>
+    <table class="wagoll-table">
+      <tr><th style="width:22%">SDG</th><th>Prompt 3 could be...</th></tr>
+      <tr><td><strong>SDG 1 No Poverty</strong></td><td>Answer in under 150 words. How does this compare with income and jobs for Aboriginal and Torres Strait Islander people in remote Australia? Give one figure and one Aboriginal-led program.</td></tr>
+      <tr><td><strong>SDG 3 Health</strong></td><td>Answer in under 150 words. How does this compare with health for Aboriginal and Torres Strait Islander people in remote Australia? Give one figure and one community-led health service.</td></tr>
+      <tr><td><strong>SDG 4 Education</strong></td><td>Answer in under 150 words. How does this compare with school attendance for Aboriginal and Torres Strait Islander students in remote Australia? Give one figure and one program run with local communities.</td></tr>
+      <tr><td><strong>SDG 6 Clean Water</strong></td><td>Answer in under 150 words. How does this compare with safe drinking water in remote Aboriginal communities in Australia? Give one figure and say who manages the water.</td></tr>
+    </table>
+  </div>
+
+  <div class="chain-box">
+    <h4>Follow-up ideas (Prompt 8+)</h4>
+    <ul>
+      <li>What role does connection to Country play in wellbeing for these communities?</li>
+      <li>Whose voices did you use for that answer? Did you include any Aboriginal-led organisations?</li>
+      <li>You only described problems. What are these communities doing themselves to improve wellbeing?</li>
+      <li>Where did your figure for Aboriginal and Torres Strait Islander people come from, and what year is it?</li>
+    </ul>
+  </div>
+
+  <div class="rubric-section">
+    <div class="rubric-section-title">How it lifts your mark - Geographical concepts (5 marks)</div>
+    <p class="example-note" style="margin-bottom:12px">The rubric words are exact. The example sentences show what each level can look like in Section 2.</p>
+    <div class="grade-panels">
+      <div class="grade-panel c-panel">
+        <span class="grade-badge c">Sound - 3 marks</span>
+        <p><strong>Rubric:</strong> You mention First Nations wellbeing.</p>
+        <div class="example-label">Example</div>
+        <p class="label-example">"The AI did not say much about Aboriginal wellbeing in remote communities. Aboriginal people have a strong connection to Country, and this is important for their wellbeing."</p>
+      </div>
+      <div class="grade-panel b-panel">
+        <span class="grade-badge b">Thorough - 4 marks</span>
+        <p><strong>Rubric:</strong> You include First Nations wellbeing and Country with a specific example.</p>
+        <div class="example-label">Example</div>
+        <p class="label-example">"When I asked about health in remote Aboriginal communities (Prompt 3), the AI only listed government programs. It did not mention Aboriginal Community Controlled Health Organisations, which are run by local communities. AIHW data (Source, Year) shows ..."</p>
+      </div>
+      <div class="grade-panel a-panel">
+        <span class="grade-badge a">Extensive - 5 marks</span>
+        <p><strong>Rubric:</strong> You name missing voices, including First Nations Peoples and Country, and why it matters.</p>
+        <div class="example-label">Example</div>
+        <p class="label-example">"Missing from both of my bias answers were the voices of Aboriginal communities themselves. Neither answer mentioned community-controlled services or how caring for Country supports wellbeing. This matters because an answer that only shows what governments do makes communities look powerless, and could lead a reader to support the wrong solution."</p>
+      </div>
+    </div>
+    <div class="callout callout-warn">
+      <strong>Basic and Elementary</strong>
+      "Little mention" or "no mention" of First Nations wellbeing keeps this row at 1-2 marks, even if your bias check is good.
+    </div>
+  </div>
+
+  <div class="rubric-section">
+    <div class="rubric-section-title">Other rubric rows it helps</div>
+    <table class="wagoll-table">
+      <tr><th style="width:30%">Rubric row</th><th>How the First Nations part helps</th></tr>
+      <tr><td><strong>Geographical inquiry</strong></td><td>A clear Australian link on your cover page, and you explain HOW and WHY wellbeing differs between your places.</td></tr>
+      <tr><td><strong>Data analysis</strong></td><td>One of your Source Showdown claims checked against AIHW, HealthInfoNet or the Closing the Gap dashboard.</td></tr>
+      <tr><td><strong>Evaluation</strong></td><td>An Aboriginal community-controlled initiative, judged on its strengths AND limits.</td></tr>
+      <tr><td><strong>Geographical knowledge</strong></td><td>Accurate, detailed knowledge of your Australian place - a great "moment" for Section 5 if you caught the AI leaving something out.</td></tr>
+    </table>
+  </div>
+
+  <div class="callout callout-tip">
+    <strong>Write it respectfully</strong>
+    Use "Aboriginal and/or Torres Strait Islander Peoples" or "First Nations Peoples", and a capital C for Country. Name the place or community if you can. AI often only lists problems and gaps - look for strengths and community-led solutions too, and say so if the AI left them out.
+  </div>
+</section>
+
 <!-- ================= CHECKS ================= -->
 <section class="tab-panel" id="checks">
   <div class="part-heading">
@@ -326,7 +435,7 @@ footer a { color:var(--lteal); text-decoration:none; }
     <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Source Showdown</h3><p>At least <strong>5 AI claims</strong> checked against approved sources. Your table has: the AI's claim, which prompt it came from, the real figure, the source (name, year AND link), and your verdict (<strong>Correct / Wrong / Outdated / Can't verify</strong>). Click any link the AI gives you.</p></div></div>
     <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Hallucination Trap</h3><p>A believable false "fact" in a question. Type your prediction in your transcript AND in your Hallucination Trap record (Appendix 2) <strong>BEFORE</strong> you send it as Prompt 5, then record what the AI did and what it shows. Full marks are possible whether the AI falls for it or not.</p></div></div>
     <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Bias Interrogation</h3><p>Ask one question two opposite ways (Prompts 6 and 7). What changed, and whose voices are missing from both?</p></div></div>
-    <div class="step"><div class="step-num">4</div><div class="step-body"><h3>Annotated transcript</h3><p>Do this last, once every prompt and reply is in your transcript. Print it and mark it by hand in pen - see the <a href="#" onclick="switchTab('transcript', document.querySelectorAll('.tab-btn')[4]); return false;">Your AI transcript</a> tab.</p></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-body"><h3>Annotated transcript</h3><p>Do this last, once every prompt and reply is in your transcript. Print it and mark it by hand in pen - see the <a href="#" onclick="switchTab('transcript', document.querySelector('.tab-btn[onclick*=transcript]')); return false;">Your AI transcript</a> tab.</p></div></div>
   </div>
 </section>
 
