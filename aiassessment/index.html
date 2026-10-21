@@ -122,6 +122,18 @@ footer a { color:var(--lteal); text-decoration:none; }
 .example-label { font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
 .label-example { font-style:italic; }
 @media (min-width:821px) { .tab-nav-inner { grid-template-columns:repeat(3,1fr); } }
+.sdg-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:18px 0 24px; }
+@media (max-width:820px) { .sdg-grid { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:420px) { .sdg-grid { grid-template-columns:1fr; } }
+.sdg-card { display:flex; flex-direction:column; background:var(--white); border:1.5px solid var(--border); border-radius:14px; overflow:hidden; text-decoration:none; color:var(--text); transition:box-shadow .2s, transform .2s; }
+.sdg-card:hover { box-shadow:0 6px 20px rgba(0,49,70,.15); transform:translateY(-2px); }
+.sdg-icon { aspect-ratio:1/1; display:flex; align-items:flex-start; justify-content:flex-start; color:#fff; font-weight:700; font-size:40px; padding:10px 14px; position:relative; }
+.sdg-icon img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.sdg-body { padding:12px 14px 14px; font-size:14px; line-height:1.5; font-weight:300; }
+.sdg-body h4 { font-size:15px; font-weight:600; color:var(--navy); margin-bottom:4px; }
+.sdg-body .goal { font-style:italic; color:var(--muted); margin-bottom:8px; }
+.sdg-body .lab { font-size:11px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--dteal); margin-top:6px; }
+.sdg-body .go { display:inline-block; margin-top:10px; font-weight:600; color:var(--dteal); }
 .where-pill { display:inline-block; background:var(--lteal); color:var(--navy); font-size:12.5px; font-weight:600; padding:3px 11px; border-radius:20px; margin:8px 6px 0 0; }
 .where-pill.guide { background:#fdf3e3; color:#5a4200; border:1px solid var(--yellow); }
 </style>
@@ -508,6 +520,55 @@ footer a { color:var(--lteal); text-decoration:none; }
     <div class="step"><div class="step-num">c</div><div class="step-body"><h3>One role</h3><p><strong>Fact-Checker</strong> (checking an AI news article), <strong>Aid Investigator</strong> (checking an AI report before funding goes out) or <strong>Myth-Buster</strong> (separating AI fact from fiction).</p></div></div>
     <div class="step"><div class="step-num">d</div><div class="step-body"><h3>Mission statement</h3><p>One sentence naming your role, SDG and places.</p></div></div>
   </div>
+
+  <div class="rubric-section-title" style="margin-top:24px">The four SDGs you can choose - click a box to read the UN goal page <span class="new-badge" data-added="2026-10-21">New - added 21/10</span></div>
+  <div class="sdg-grid">
+    <a class="sdg-card" href="https://sdgs.un.org/goals/goal1" target="_blank" rel="noopener">
+      <div class="sdg-icon" style="background:#E5243B">1<img src="https://sdgs.un.org/sites/default/files/goals/goal-1.png" alt="SDG 1 No Poverty icon" loading="lazy" onerror="this.remove()"></div>
+      <div class="sdg-body">
+        <h4>SDG 1 - No Poverty</h4>
+        <p class="goal">"End poverty in all its forms everywhere"</p>
+        <p class="lab">Indicators to check</p><p>% of people living below the international poverty line; income and jobs</p>
+        <p class="lab">Check them on</p><p>World Bank Open Data; UN SDG Global Database</p>
+        <p class="lab">From our lessons</p><p>S01 (STEEP), S03 (GDP and GNI)</p>
+        <span class="go">UN goal page &rarr;</span>
+      </div>
+    </a>
+    <a class="sdg-card" href="https://sdgs.un.org/goals/goal3" target="_blank" rel="noopener">
+      <div class="sdg-icon" style="background:#4C9F38">3<img src="https://sdgs.un.org/sites/default/files/goals/goal-3.png" alt="SDG 3 Good Health and Well-being icon" loading="lazy" onerror="this.remove()"></div>
+      <div class="sdg-body">
+        <h4>SDG 3 - Good Health and Well-being</h4>
+        <p class="goal">"Ensure healthy lives and promote well-being for all at all ages"</p>
+        <p class="lab">Indicators to check</p><p>Life expectancy; under-5 mortality; maternal mortality</p>
+        <p class="lab">Check them on</p><p>WHO Global Health Observatory; UN IGME (childmortality.org); World Bank</p>
+        <p class="lab">From our lessons</p><p>S04 (life expectancy, disparity)</p>
+        <span class="go">UN goal page &rarr;</span>
+      </div>
+    </a>
+    <a class="sdg-card" href="https://sdgs.un.org/goals/goal4" target="_blank" rel="noopener">
+      <div class="sdg-icon" style="background:#C5192D">4<img src="https://sdgs.un.org/sites/default/files/goals/goal-4.png" alt="SDG 4 Quality Education icon" loading="lazy" onerror="this.remove()"></div>
+      <div class="sdg-body">
+        <h4>SDG 4 - Quality Education</h4>
+        <p class="goal">"Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all"</p>
+        <p class="lab">Indicators to check</p><p>Mean and expected years of schooling; school completion; literacy</p>
+        <p class="lab">Check them on</p><p>UNESCO Institute for Statistics; UNDP Human Development Reports; UNICEF Data</p>
+        <p class="lab">From our lessons</p><p>S05 (HDI, quantitative and qualitative)</p>
+        <span class="go">UN goal page &rarr;</span>
+      </div>
+    </a>
+    <a class="sdg-card" href="https://sdgs.un.org/goals/goal6" target="_blank" rel="noopener">
+      <div class="sdg-icon" style="background:#26BDE2">6<img src="https://sdgs.un.org/sites/default/files/goals/goal-6.png" alt="SDG 6 Clean Water and Sanitation icon" loading="lazy" onerror="this.remove()"></div>
+      <div class="sdg-body">
+        <h4>SDG 6 - Clean Water and Sanitation</h4>
+        <p class="goal">"Ensure availability and sustainable management of water and sanitation for all"</p>
+        <p class="lab">Indicators to check</p><p>% using safely managed drinking water; % using safely managed sanitation</p>
+        <p class="lab">Check them on</p><p>WHO/UNICEF Joint Monitoring Programme (washdata.org); UNICEF Data</p>
+        <p class="lab">From our lessons</p><p>S01 (Geo Spark: clean water)</p>
+        <span class="go">UN goal page &rarr;</span>
+      </div>
+    </a>
+  </div>
+  <p class="example-note">Goal wording and icons: United Nations, Sustainable Development Goals (sdgs.un.org). Pick the SDG that has good data for BOTH your overseas place and your Australian link.</p>
   <div class="callout callout-warn">
     <strong>Not Kenya</strong>
     Kenya is the class example, so you can't use Kenya - you can still choose SDG 3.
