@@ -898,7 +898,7 @@ function sendFeedback(e, form) {
 }
 document.querySelectorAll('.tab-panel').forEach(function(panel){
   var div = document.createElement('div');
-  div.innerHTML = '<div class="feedback-section"><button type="button" class="feedback-toggle-btn" onclick="this.nextElementSibling.classList.toggle(\'open\')">Found something wrong or confusing? Let me know &rarr;</button><div class="feedback-inner"><form onsubmit="return sendFeedback(event,this)"><div class="feedback-fields"><div class="feedback-field"><label>Your full name</label><input type="text" name="name" required></div><div class="feedback-field"><label>Your class</label><input type="text" name="class" required></div></div><div class="feedback-field full" style="margin-bottom:8px"><label>What did you find? Where was it?</label><textarea name="message" rows="2" required></textarea></div><div class="feedback-status"></div><button class="feedback-btn" type="submit">Send feedback</button></form></div></div>';
+  div.innerHTML = '<div class="feedback-section"><a class="feedback-toggle-btn" href="https://outlook.office.com/mail/deeplink/compose?to=michelle.perkins@spcc.nsw.edu.au&subject=Help%20site%20typo%20-%20Cross-Examine%20the%20AI&body=Tab%3A%20%0AWhat%20I%20found%3A%20" target="_blank" rel="noopener">Typos? Send me an email here &rarr;</a></div>';
   panel.appendChild(div.firstElementChild);
 });
 (function(){
