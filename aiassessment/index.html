@@ -15,9 +15,9 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --navy:#0e3b4f; --teal:#2f9e8f; --lteal:#a8ddd0; --dteal:#1f6f63;
-  --cream:#f6f8f6; --yellow:#f4b942; --amber:#f4b942; --white:#ffffff;
-  --text:#1f2d2b; --muted:#6b7b78; --border:#dbe6e2; --clay:#ef7c5c;
+  --navy:#003146; --teal:#00645f; --lteal:#8ac5cf; --dteal:#004b5d;
+  --cream:#f7eee9; --yellow:#ffc20e; --amber:#ffc20e; --white:#ffffff;
+  --text:#1f2d2b; --muted:#4d6b78; --border:#e3d8d0; --clay:#d55a1f; --sage:#6aa69b;
 }
 *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
 body { font-family:'DM Sans', sans-serif; background:var(--cream); color:var(--text); min-height:100vh; }
@@ -36,8 +36,8 @@ header h1 em { color:var(--yellow); font-style:italic; }
 .tab-btn { display:flex; align-items:center; justify-content:center; text-align:center; line-height:1.3; background:rgba(255,255,255,.08); border:1.5px solid rgba(255,255,255,.15); cursor:pointer; font-family:'DM Sans',sans-serif; font-size:14px; font-weight:600; color:rgba(255,255,255,.8); padding:10px 14px; border-radius:10px; position:relative; transition:background .2s,border-color .2s,color .2s; }
 @media (max-width:820px) { .tab-nav-inner { grid-template-columns:repeat(3,1fr); } }
 .tab-btn:hover { background:rgba(255,255,255,.16); color:var(--white); }
-.tab-btn.tab-resources { background:rgba(239,124,92,.3); border-color:rgba(239,124,92,.55); }
-.tab-btn.tab-resources:hover { background:rgba(239,124,92,.45); }
+.tab-btn.tab-resources { background:rgba(106,166,155,.45); border-color:rgba(106,166,155,.8); }
+.tab-btn.tab-resources:hover { background:rgba(106,166,155,.65); }
 .tab-btn.active { background:var(--yellow); border-color:var(--yellow); color:var(--navy); }
 main { max-width:960px; margin:0 auto; padding:40px 24px 80px; }
 .tab-panel { display:none; }
@@ -140,6 +140,7 @@ footer a { color:var(--lteal); text-decoration:none; }
   <div class="tab-nav-inner">
     <button class="tab-btn active" onclick="switchTab('start', this)">Start here</button>
     <button class="tab-btn" onclick="switchTab('dowell', this)">Before you start<br>How to do well</button>
+    <button class="tab-btn" onclick="switchTab('ideas', this)">Ideas from class<br>Lessons 1-6</button>
     <button class="tab-btn" onclick="switchTab('steps12', this)">Steps 1-2<br>Choose &amp; Investigate</button>
     <button class="tab-btn" onclick="switchTab('chat', this)">Your chat<br>Prompts 1-8</button>
     <button class="tab-btn" onclick="switchTab('firstnations', this)">First Nations<br>&amp; Country</button>
@@ -258,7 +259,7 @@ footer a { color:var(--lteal); text-decoration:none; }
     <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Get your files from iLearn</h3><p>Go to the <strong>Assessment Task 4 - Cross-Examine the AI</strong> page on iLearn (Stage 5 Geography &gt; Human Wellbeing). Your files are numbered 1-6 in the order you use them. <strong>Download files 5 and 6</strong> (the My AI Transcript Template and the My Submission Template) - they are Word files, so save them as your own and type into them.</p><span class="where-pill guide">The right formats are on iLearn</span></div></div>
     <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Lock in Step 1</h3><p>Choose your SDG, your overseas place (not Kenya), your Australian First Nations link and your role, then write your one-sentence mission statement. Every question you ask later should match it.</p><span class="where-pill">Marks: Geographical inquiry - Cover page + Section 1</span></div></div>
     <div class="step"><div class="step-num">4</div><div class="step-body"><h3>Find 3-5 real figures first</h3><p>Before you ask the AI anything, look up your country on an approved source (see the <a href="#" onclick="switchTab('sources', document.querySelector('.tab-btn[onclick*=sources]')); return false;">Sources</a> tab) - for example life expectancy, under-5 mortality or HDI, with the year. When the AI gives its numbers, you'll already know which ones look wrong.</p><span class="where-pill">Marks: Data analysis - Check 1 Source Showdown</span></div></div>
-    <div class="step"><div class="step-num">5</div><div class="step-body"><h3>List 3 things you learnt in class</h3><p>Write down three things from our lessons that connect to your SDG or place - an indicator, why wellbeing varies inside a country, First Nations connection to Country, or an initiative. These are what you use to catch the AI out.</p><span class="where-pill">Marks: Geographical knowledge - Section 5</span></div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-body"><h3>List 3 things you learnt in class</h3><p>Write down three things from our lessons that connect to your SDG or place - an indicator, why wellbeing varies inside a country, First Nations connection to Country, or an initiative. These are what you use to catch the AI out. Need ideas? See the <a href="#" onclick="switchTab('ideas', document.querySelector('.tab-btn[onclick*=ideas]')); return false;">Ideas from class</a> tab.</p><span class="where-pill">Marks: Geographical knowledge - Section 5</span></div></div>
     <div class="step"><div class="step-num">6</div><div class="step-body"><h3>Plan your questions with the rubric</h3><p>Your prompt starts are already in the template. How you finish them is up to you. Use the table below - the kind of question you ask decides where your marks come from.</p></div></div>
     <div class="step"><div class="step-num">7</div><div class="step-body"><h3>Copy and paste as you go</h3><p>After every prompt, <strong>copy and paste your prompt AND the AI's full reply</strong> into your My AI Transcript Template, in order. Don't type it out and don't leave it until the end. This clean copy is one of the two files you upload.</p><span class="where-pill">Marks: Investigation skills - your transcript (10 marks)</span></div></div>
   </div>
@@ -300,6 +301,182 @@ footer a { color:var(--lteal); text-decoration:none; }
   <div class="callout callout-tip">
     <strong>Next</strong>
     Open the <a href="#" onclick="switchTab('steps12', document.querySelector('.tab-btn[onclick*=steps12]')); return false;">Steps 1-2</a> tab, then <a href="#" onclick="switchTab('chat', document.querySelector('.tab-btn[onclick*=chat]')); return false;">Your chat</a>.
+  </div>
+</section>
+
+<!-- ================= IDEAS FROM CLASS ================= -->
+<section class="tab-panel" id="ideas">
+  <div class="part-heading">
+    <div class="part-number">S</div>
+    <div class="part-title">
+      <h2>Ideas from class - Lessons 1-6 <span class="new-badge" data-added="2026-10-21">New - added 21/10</span></h2>
+      <p>The key words and big ideas from our lessons so far - and questions you can use to test your AI.</p>
+    </div>
+  </div>
+
+  <div class="callout callout-tip">
+    <strong>How to use this page</strong>
+    Pick ideas from the lessons that fit your SDG and place. Swap [country] for your own place and finish each question in your own words (start with "Answer in under 150 words."). You already know this content - so you are the one who can catch the AI when it gets it wrong. That's what Section 5 rewards.
+  </div>
+
+  <div class="step-heading">
+    <div class="step-big-num">1</div>
+    <div><h3>S01 - What is Human Wellbeing</h3></div>
+  </div>
+  <div class="chain-box">
+    <h4>Key words</h4>
+    <table class="wagoll-table">
+      <tr><th style="width:30%">Word</th><th>What it means</th></tr>
+      <tr><td><strong>Wellbeing</strong></td><td>Having what you need for life to be good - more than just income or wealth.</td></tr>
+      <tr><td><strong>STEEP</strong></td><td>Sorts wellbeing indicators into five domains: Social, Technological, Environmental, Economic, Political.</td></tr>
+      <tr><td><strong>GDP</strong></td><td>Gross Domestic Product - the most common (but limited) economic measure countries are compared on.</td></tr>
+    </table>
+    <h4 style="margin-top:16px">Big ideas</h4>
+    <ul>
+      <li>Wellbeing is more than money - it also covers basic needs, equity, sustainability, freedom and safety.</li>
+      <li>Wellbeing looks different depending on who you ask (safety first, relationships, connection to land).</li>
+    </ul>
+    <h4 style="margin-top:16px">Test your AI with...</h4>
+    <ul>
+      <li>"Give me one wellbeing indicator for [country] in each STEEP domain, with a figure and year for each."</li>
+      <li>"How might wellbeing look different for people in [a rural region] compared with [the capital]?"</li>
+    </ul>
+    <span class="where-pill guide">Catch it: Does the AI only talk about money? You know wellbeing is wider than GDP.</span>
+  </div>
+
+  <div class="step-heading">
+    <div class="step-big-num">2</div>
+    <div><h3>S02 - Mapping Wellbeing</h3></div>
+  </div>
+  <div class="chain-box">
+    <h4>Key words</h4>
+    <table class="wagoll-table">
+      <tr><th style="width:30%">Word</th><th>What it means</th></tr>
+      <tr><td><strong>Choropleth map</strong></td><td>A map that uses different shades of the same colour to show a pattern in data.</td></tr>
+      <tr><td><strong>PQE</strong></td><td>Pattern, Quantify, Exception - the three-step method for analysing any map or data set.</td></tr>
+      <tr><td><strong>Spatial pattern</strong></td><td>How something is distributed across space - where it clusters, where it's sparse.</td></tr>
+    </table>
+    <h4 style="margin-top:16px">Big ideas</h4>
+    <ul>
+      <li>High HDI countries cluster (Western Europe, North America, East Asia, Australasia); low HDI clusters in Sub-Saharan Africa and places affected by conflict.</li>
+      <li>An exception is often the most interesting thing on the map - ask why it exists.</li>
+    </ul>
+    <h4 style="margin-top:16px">Test your AI with...</h4>
+    <ul>
+      <li>"Where does [country] sit on the world HDI map compared with its neighbours? Is it an exception to the pattern?"</li>
+      <li>"What is [country]'s life satisfaction score in the World Happiness Report, and how does it compare with its HDI?"</li>
+    </ul>
+    <span class="where-pill guide">Catch it: Is the AI's 'pattern' backed by real numbers (the Q in PQE)?</span>
+  </div>
+
+  <div class="step-heading">
+    <div class="step-big-num">3</div>
+    <div><h3>S03 - Trends in Wealth</h3></div>
+  </div>
+  <div class="chain-box">
+    <h4>Key words</h4>
+    <table class="wagoll-table">
+      <tr><th style="width:30%">Word</th><th>What it means</th></tr>
+      <tr><td><strong>GDP</strong></td><td>The value of all goods and services produced within a country's borders, no matter who produced them.</td></tr>
+      <tr><td><strong>GNI</strong></td><td>The value of what a country's own residents and businesses earn, no matter where in the world they earned it.</td></tr>
+      <tr><td><strong>TNC</strong></td><td>Transnational Corporation - a company that operates in many countries but sends profits back to its home country.</td></tr>
+    </table>
+    <h4 style="margin-top:16px">Big ideas</h4>
+    <ul>
+      <li>GDP asks 'where did it happen?' GNI asks 'who earned it?'</li>
+      <li>Neither measure shows how evenly wealth is shared, or costs like pollution and stress.</li>
+    </ul>
+    <h4 style="margin-top:16px">Test your AI with...</h4>
+    <ul>
+      <li>"What are [country]'s GDP per capita and GNI per capita, and why are they different?"</li>
+      <li>"Which transnational corporations operate in [country], and where do their profits go?"</li>
+      <li>"What does GDP miss about wellbeing in [country]?"</li>
+    </ul>
+    <span class="where-pill guide">Catch it: Has the AI mixed up GDP and GNI? Many sources do.</span>
+  </div>
+
+  <div class="step-heading">
+    <div class="step-big-num">4</div>
+    <div><h3>S04 - Trends in Health</h3></div>
+  </div>
+  <div class="chain-box">
+    <h4>Key words</h4>
+    <table class="wagoll-table">
+      <tr><th style="width:30%">Word</th><th>What it means</th></tr>
+      <tr><td><strong>Life expectancy</strong></td><td>The average number of years a person is expected to live in a given country.</td></tr>
+      <tr><td><strong>Disparity</strong></td><td>A noticeable difference or gap between groups or places.</td></tr>
+      <tr><td><strong>HDI</strong></td><td>Human Development Index - a measure built from life expectancy, education and income combined.</td></tr>
+    </table>
+    <h4 style="margin-top:16px">Big ideas</h4>
+    <ul>
+      <li>Life expectancy has risen almost everywhere since 1960, but not evenly.</li>
+      <li>National averages can hide big gaps within a country - including in Australia for Aboriginal and Torres Strait Islander Peoples.</li>
+    </ul>
+    <h4 style="margin-top:16px">Test your AI with...</h4>
+    <ul>
+      <li>"What is life expectancy in [country], and how does it differ between regions or groups?"</li>
+      <li>"How has life expectancy in [country] changed since 1960, and why?"</li>
+      <li>"How does life expectancy for Aboriginal and Torres Strait Islander Peoples compare with the Australian average?"</li>
+    </ul>
+    <span class="where-pill guide">Catch it: Does the AI give one national average and stop? Ask what that average hides.</span>
+  </div>
+
+  <div class="step-heading">
+    <div class="step-big-num">5</div>
+    <div><h3>S05 - Trends in Education</h3></div>
+  </div>
+  <div class="chain-box">
+    <h4>Key words</h4>
+    <table class="wagoll-table">
+      <tr><th style="width:30%">Word</th><th>What it means</th></tr>
+      <tr><td><strong>Quantitative indicator</strong></td><td>A measure you can count with numbers, e.g. GNI, literacy rate, life expectancy.</td></tr>
+      <tr><td><strong>Qualitative indicator</strong></td><td>A measure that's harder to capture with numbers, from surveys not counts, e.g. freedom of speech, safety.</td></tr>
+      <tr><td><strong>Empowerment</strong></td><td>Having the knowledge, resources and opportunity to improve your own life circumstances.</td></tr>
+    </table>
+    <h4 style="margin-top:16px">Big ideas</h4>
+    <ul>
+      <li>The HDI has three dimensions: long and healthy life, knowledge (mean and expected years of schooling) and standard of living (GNI per capita).</li>
+      <li>Some things that matter, like happiness or freedom, are harder to measure (Happy Planet Index, Bhutan's Gross National Happiness).</li>
+    </ul>
+    <h4 style="margin-top:16px">Test your AI with...</h4>
+    <ul>
+      <li>"What are [country]'s mean years of schooling and expected years of schooling, and what is its HDI?"</li>
+      <li>"What qualitative indicators, such as safety or freedom of speech, describe wellbeing in [country]?"</li>
+      <li>"How do girls' and boys' access to school compare in [country]?"</li>
+    </ul>
+    <span class="where-pill guide">Catch it: Does the AI get the HDI's three parts right?</span>
+  </div>
+
+  <div class="step-heading">
+    <div class="step-big-num">6</div>
+    <div><h3>S06 - Inequality in Wellbeing (Syria)</h3></div>
+  </div>
+  <div class="chain-box">
+    <h4>Key words</h4>
+    <table class="wagoll-table">
+      <tr><th style="width:30%">Word</th><th>What it means</th></tr>
+      <tr><td><strong>Displacement</strong></td><td>Being forced to leave home due to conflict - within your own country (an IDP) or across a border (a refugee).</td></tr>
+      <tr><td><strong>Humanitarian assistance</strong></td><td>Aid that meets basic needs - food, water, shelter, healthcare - during or after a crisis.</td></tr>
+      <tr><td><strong>Transitional government</strong></td><td>A government put in place temporarily after major political change.</td></tr>
+      <tr><td><strong>Reconstruction</strong></td><td>Rebuilding infrastructure, services and the economy after conflict.</td></tr>
+    </table>
+    <h4 style="margin-top:16px">Big ideas</h4>
+    <ul>
+      <li>Conflict can set a country's wellbeing back years - on health, income and education at once.</li>
+      <li>Wellbeing varies WITHIN a country, not just between countries. Aid helps, but has limits (e.g. funding cuts).</li>
+    </ul>
+    <h4 style="margin-top:16px">Test your AI with...</h4>
+    <ul>
+      <li>"How has conflict or political change affected wellbeing in [country]?"</li>
+      <li>"How does wellbeing vary between regions of [country]?"</li>
+      <li>"What humanitarian assistance or aid is there in [country], and what are its limits?"</li>
+    </ul>
+    <span class="where-pill guide">Catch it: Does the AI only say what aid achieved? Ask what it couldn't do.</span>
+  </div>
+
+  <div class="callout callout-example">
+    <strong>Check every answer</strong>
+    Whatever you ask, check the AI's figures against an approved source (see the <a href="#" onclick="switchTab('sources', document.querySelector('.tab-btn[onclick*=sources]')); return false;">Sources</a> tab) - UNDP Human Development Reports, World Bank, Our World in Data, UNESCO, WHO, UNICEF or your country's own statistics office.
   </div>
 </section>
 
