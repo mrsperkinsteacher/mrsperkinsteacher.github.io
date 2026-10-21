@@ -122,6 +122,8 @@ footer a { color:var(--lteal); text-decoration:none; }
 .example-label { font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
 .label-example { font-style:italic; }
 @media (min-width:821px) { .tab-nav-inner { grid-template-columns:repeat(3,1fr); } }
+.where-pill { display:inline-block; background:var(--lteal); color:var(--navy); font-size:12.5px; font-weight:600; padding:3px 11px; border-radius:20px; margin:8px 6px 0 0; }
+.where-pill.guide { background:#fdf3e3; color:#5a4200; border:1px solid var(--yellow); }
 </style>
 </head>
 <body>
@@ -137,6 +139,7 @@ footer a { color:var(--lteal); text-decoration:none; }
 <nav class="tab-nav" role="tablist">
   <div class="tab-nav-inner">
     <button class="tab-btn active" onclick="switchTab('start', this)">Start here</button>
+    <button class="tab-btn" onclick="switchTab('dowell', this)">Before you start<br>How to do well</button>
     <button class="tab-btn" onclick="switchTab('steps12', this)">Steps 1-2<br>Choose &amp; Investigate</button>
     <button class="tab-btn" onclick="switchTab('chat', this)">Your chat<br>Prompts 1-8</button>
     <button class="tab-btn" onclick="switchTab('firstnations', this)">First Nations<br>&amp; Country</button>
@@ -237,6 +240,61 @@ footer a { color:var(--lteal); text-decoration:none; }
       <li><strong>Decide</strong> - your verdict, an initiative, and what you added.</li>
       <li><strong>Submit</strong> - two files on iLearn.</li>
     </ol>
+  </div>
+</section>
+
+<!-- ================= HOW TO DO WELL ================= -->
+<section class="tab-panel" id="dowell">
+  <div class="part-heading">
+    <div class="part-number">Go</div>
+    <div class="part-title">
+      <h2>Before you start - how to do well <span class="new-badge" data-added="2026-10-21">New - added 21/10</span></h2>
+      <p>Do these steps before you open the AI. Know a little before you ask - you can't catch a mistake you don't know is a mistake.</p>
+    </div>
+  </div>
+
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Have your C-level Model Submission in front of you</h3><p>Keep your <strong>printed C-level Model Submission</strong> open on your desk the whole time. It shows what every part looks like when it's finished. Find the part you're working on and use it as your guide.</p><span class="where-pill guide">Your guide at every step</span></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Get your files from iLearn</h3><p>Go to the <strong>Assessment Task 4 - Cross-Examine the AI</strong> page on iLearn (Stage 5 Geography &gt; Human Wellbeing). Your files are numbered 1-6 in the order you use them. <strong>Download files 5 and 6</strong> (the My AI Transcript Template and the My Submission Template) - they are Word files, so save them as your own and type into them.</p><span class="where-pill guide">The right formats are on iLearn</span></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Lock in Step 1</h3><p>Choose your SDG, your overseas place (not Kenya), your Australian First Nations link and your role, then write your one-sentence mission statement. Every question you ask later should match it.</p><span class="where-pill">Marks: Geographical inquiry - Cover page + Section 1</span></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-body"><h3>Find 3-5 real figures first</h3><p>Before you ask the AI anything, look up your country on an approved source (see the <a href="#" onclick="switchTab('sources', document.querySelector('.tab-btn[onclick*=sources]')); return false;">Sources</a> tab) - for example life expectancy, under-5 mortality or HDI, with the year. When the AI gives its numbers, you'll already know which ones look wrong.</p><span class="where-pill">Marks: Data analysis - Check 1 Source Showdown</span></div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-body"><h3>List 3 things you learnt in class</h3><p>Write down three things from our lessons that connect to your SDG or place - an indicator, why wellbeing varies inside a country, First Nations connection to Country, or an initiative. These are what you use to catch the AI out.</p><span class="where-pill">Marks: Geographical knowledge - Section 5</span></div></div>
+    <div class="step"><div class="step-num">6</div><div class="step-body"><h3>Plan your questions with the rubric</h3><p>Your prompt starts are already in the template. How you finish them is up to you. Use the table below - the kind of question you ask decides where your marks come from.</p></div></div>
+    <div class="step"><div class="step-num">7</div><div class="step-body"><h3>Copy and paste as you go</h3><p>After every prompt, <strong>copy and paste your prompt AND the AI's full reply</strong> into your My AI Transcript Template, in order. Don't type it out and don't leave it until the end. This clean copy is one of the two files you upload.</p><span class="where-pill">Marks: Investigation skills - your transcript (10 marks)</span></div></div>
+  </div>
+
+  <div class="callout callout-alert">
+    <strong>Don't forget: copy and paste</strong>
+    Every prompt and every full reply goes into your transcript, in order, straight away. If you lose your chat, you lose your evidence.
+  </div>
+
+  <div class="rubric-section" style="margin-top:28px">
+    <div class="rubric-section-title">If you ask questions like this... the marks come from here</div>
+    <table class="wagoll-table">
+      <tr><th style="width:38%">Ask questions like...</th><th style="width:30%">You get...</th><th>The marks come from</th></tr>
+      <tr><td>"Give me the life expectancy, under-5 mortality and HDI for [country], with the year for each."</td><td>Figures you can check against real data</td><td><strong>Data analysis</strong> - Check 1 Source Showdown (Appendix 1)</td></tr>
+      <tr><td>"Why is [indicator] worse in [region] than in the capital?"</td><td>Reasons wellbeing differs between places</td><td><strong>Geographical inquiry</strong> - Section 1</td></tr>
+      <tr><td>Your trap: a real figure from Answer 1, changed just enough to sound true</td><td>Whether the AI corrects you or goes along with it</td><td><strong>Explanation and reasoning</strong> - Check 2 Hallucination Trap (Appendix 2 + Section 2)</td></tr>
+      <tr><td>The same question two ways (HELPED, then HARMED), then "Whose views are missing from your answer?"</td><td>Bias, and the voices left out - including First Nations Peoples and Country</td><td><strong>Geographical concepts</strong> - Check 3 Bias Interrogation (Section 2)</td></tr>
+      <tr><td>"What criticisms has [initiative] faced, and how is its success measured?"</td><td>The initiative's strengths AND limits</td><td><strong>Evaluation</strong> - Step 4 (Sections 3 + 4)</td></tr>
+      <tr><td>"You said [X]. In class we learnt [Y]. Which is right, and why?"</td><td>A moment where YOUR knowledge catches the AI</td><td><strong>Geographical knowledge</strong> - Section 5</td></tr>
+      <tr><td>Follow-up questions your role would ask (Prompt 8+)</td><td>Prompts that clearly follow your role</td><td><strong>Investigation skills</strong> - your transcript (10 marks)</td></tr>
+    </table>
+    <p class="example-note">Two more rubric rows mark your whole task: Use of evidence (your in-text citations and Sources list) and Geographical language (your writing).</p>
+  </div>
+
+  <div class="chain-box">
+    <h4>Before you send any prompt, ask yourself</h4>
+    <ol>
+      <li><strong>Does it fit my role?</strong></li>
+      <li><strong>Will the answer give me something I can check?</strong> A number, a year or a named place.</li>
+      <li><strong>Does it use something we learnt in class?</strong> That's how you catch the AI out.</li>
+    </ol>
+  </div>
+
+  <div class="callout callout-tip">
+    <strong>Next</strong>
+    Open the <a href="#" onclick="switchTab('steps12', document.querySelector('.tab-btn[onclick*=steps12]')); return false;">Steps 1-2</a> tab, then <a href="#" onclick="switchTab('chat', document.querySelector('.tab-btn[onclick*=chat]')); return false;">Your chat</a>.
   </div>
 </section>
 
