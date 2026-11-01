@@ -10,142 +10,24 @@
   gtag('config', 'G-NH0WN47NP2');
 </script>
 <meta charset="UTF-8">
-<meta name="description" content="Mrs Perkins - extra resources to help with your studies: Geography, Business Studies, Commerce and Christian Life Studies.">
-<!-- Clip art: "Cute Koala" (02) and "Cute Panda" (05) by SamilyArtStudio, Etsy (etsy.com/shop/SamilyArtStudio). Register SET-106, SET-109. -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mrs Perkins Teacher</title>
+<meta name="description" content="Mrs Perkins - extra resources to help with your studies: Geography, Business Studies, Commerce and Christian Life Studies.">
+<!-- Clip art: "Cute Koala" (02) and "Cute Panda" (05) by SamilyArtStudio, Etsy (etsy.com/shop/SamilyArtStudio). Register SET-106, SET-109. -->
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<style>
-:root{
-  color-scheme: light;
-  --navy:#003146;--white:#fff;--cream:#f7eee9;--gold:#ffc20e;
-  --home-1:#fbf1f1;--home-2:#f4d9da;--home-3:#e8b7bc;--home-4:#d48e98;--home-5:#a8657a;--home-6:#6e3d5a;
-  --geo-1:#e8f4f2;--geo-2:#c4e3de;--geo-5:#00645f;--geo-6:#004b5d;--geo-t1:#c4e3de;--geo-t2:#9fd1d2;--geo-t3:#79bec5;--geo-t4:#54acb9;
-  --bus-1:#fefde9;--bus-2:#fcf8c6;--bus-5:#8f8526;--bus-6:#6b6420;--bus-t1:#fcf8c6;--bus-t2:#f9f2a2;--bus-t3:#f5ec7e;
-  --eng-1:#f4eef8;--eng-2:#e2d3ef;--eng-5:#6d4f9c;--eng-6:#46336b;
-  --com-1:#eef7e6;--com-2:#d6ecc3;--com-5:#4f8f34;--com-6:#2e5e22;--com-t2:#bbdea1;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--cream);color:var(--navy);font-family:Inter,"Open Sans",system-ui,sans-serif;font-size:16px;line-height:1.5;min-height:100vh;display:flex;flex-direction:column}
-h1,h2,h3,.serif{font-family:"DM Serif Display",Georgia,serif;font-weight:400}
-.lbl{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-.wrap{max-width:1100px;width:100%;margin:0 auto;padding:0 16px}
-main{flex:1;padding:20px 0 40px}
-
-/* menu (C2, other pages only, soft style) */
-.menu{background:var(--home-1);border-bottom:2px solid var(--home-3);position:sticky;top:0;z-index:5}
-body.is-home .menu{display:none}
-.menu .wrap{display:flex;gap:6px 26px;flex-wrap:wrap;padding-top:12px;padding-bottom:10px}
-.menu a{color:var(--navy);text-decoration:none;font-size:15px;font-weight:600;padding:2px 0 4px;border-bottom:3px solid transparent}
-.menu a:hover{border-bottom-color:var(--home-3)}
-.menu a.on{border-bottom-color:var(--gold)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
-
-/* hero (A2) */
-.hero{background:var(--home-2);border-radius:14px;display:grid;grid-template-columns:minmax(80px,150px) 1fr minmax(80px,150px);align-items:end;gap:8px;padding:22px 16px 0;text-align:center;overflow:hidden}
-.hero img{width:100%;max-width:150px;height:auto;justify-self:center}
-.hero .mid{padding-bottom:26px}
-.hero h1{font-size:clamp(28px,4vw,40px);line-height:1.1}
-.hero p{margin-top:8px;font-size:16px}
-.hero .bar{background:var(--home-6);height:6px;border-radius:999px;width:60px;margin:12px auto 0}
-@media (max-width:620px){
-  .hero{grid-template-columns:1fr 1fr;padding-top:20px}
-  .hero .mid{grid-column:1/-1;order:-1;padding-bottom:4px}
-  .hero img{max-width:110px}
-}
-
-/* tiles (B1, C1, D1) */
-.subj-bar{color:var(--white);border-radius:10px;padding:7px 14px;margin:22px 0 10px}
-.tiles{display:grid;gap:10px}
-.cols5{grid-template-columns:repeat(5,minmax(0,1fr))}
-.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}
-@media (max-width:820px){.cols5{grid-template-columns:repeat(2,minmax(0,1fr))}.cols5>.tile:last-child:nth-child(odd):not(:first-child){grid-column:1/-1}}
-@media (max-width:560px){.cols3{grid-template-columns:1fr}}
-.tile{border:3px solid;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--navy);min-height:112px;transition:transform .15s}
-a.tile:hover{transform:translateY(-3px)}
-.tile .t{font-family:"DM Serif Display",Georgia,serif;font-size:22px;line-height:1.1;padding:12px 12px 10px;flex:1;min-height:2.6em}
-.tile .band{color:var(--white);padding:6px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.tile .pill{display:block;width:max-content;margin-top:6px;font-family:Inter,system-ui,sans-serif;border-radius:999px;padding:1px 9px;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--gold);color:var(--navy);max-width:100%}
-.soon{opacity:.55;cursor:default}
-.geo{border-color:var(--geo-5)}.geo .band{background:var(--geo-5)}
-.bus{border-color:var(--bus-5)}.bus .band{background:var(--bus-5)}
-.com{border-color:var(--com-5)}.com .band{background:var(--com-5)}
-.cls{border-color:var(--eng-5)}.cls .band{background:var(--eng-5)}
-.home{border-color:var(--home-5)}.home .band{background:var(--home-5)}
-button.tile{font:inherit;text-align:left;cursor:pointer;background:none}
-
-/* pages */
-.page{display:none}.page.on{display:block}
-.page-head{background:var(--home-6);color:var(--white);border-radius:12px;padding:16px 18px;margin-bottom:16px}
-.page-head h1{font-size:clamp(26px,4vw,34px)}
-.page-head p{margin-top:4px}
-.crumb{font-size:13px;margin:0 0 10px}
-.crumb a{color:var(--navy)}
-
-details{border:3px solid var(--home-5);border-radius:12px;margin-bottom:10px;background:var(--home-1)}
-summary{cursor:pointer;padding:12px 16px;font-weight:600;font-size:17px}
-details .in{padding:0 16px 14px}
-details ul{margin:6px 0 0 22px}
-.placeholder{display:inline-block;background:var(--gold);border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:1px 8px;margin-left:6px;vertical-align:middle}
-
-.subpage{display:none;margin-top:16px;border-radius:12px;padding:14px}
-.subpage.on{display:block}
-.subpage h2{font-size:24px;margin-bottom:10px}
-.wh-tiles .tile.on{box-shadow:0 0 0 4px var(--gold)}
-
-.contact{background:var(--home-2);border:3px solid var(--home-5);border-radius:14px;padding:18px;max-width:720px}
-.contact p{font-size:17px}
-.check{margin-top:14px;background:var(--white);border-radius:10px;padding:14px 16px}
-.check ul{margin:6px 0 0 22px}
-.check li{margin:3px 0}
-.btn{display:inline-block;background:var(--home-6);color:var(--white);border-radius:999px;padding:9px 20px;font-weight:600;text-decoration:none;margin-top:14px}
-
-.layout{display:flex;gap:6px;align-items:center;flex-wrap:wrap;font-size:13px;margin:-4px 0 14px}
-.layout button{font:inherit;font-weight:600;border:2px solid var(--home-5);background:var(--white);color:var(--navy);border-radius:999px;padding:4px 12px;cursor:pointer}
-.layout button.on{background:var(--home-6);border-color:var(--home-6);color:var(--white)}
-.tabs{display:none;gap:6px;flex-wrap:wrap;margin-bottom:6px}
-.tabs button{font:inherit;font-size:15px;font-weight:600;border-radius:999px;border:2px solid;padding:6px 16px;background:var(--white);color:var(--navy);cursor:pointer}
-.tabs .g{border-color:var(--geo-5)}.tabs .b{border-color:var(--bus-5)}.tabs .c{border-color:var(--com-5)}
-.tabs .g.on{background:var(--geo-6);border-color:var(--geo-6);color:var(--white)}
-.tabs .b.on{background:var(--bus-6);border-color:var(--bus-6);color:var(--white)}
-.tabs .c.on{background:var(--com-6);border-color:var(--com-6);color:var(--white)}
-#p-write.f1 .tabs{display:flex}
-#p-write.f1 #wh{display:none}
-#p-write.f1 .subpage .crumb{display:none}
-
-/* footer (H2 + I2) */
-footer{background:var(--home-6);color:var(--white)}
-footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding-top:14px;padding-bottom:14px;font-size:14px}
-footer a{color:var(--gold);font-weight:600;text-decoration:none}
-footer a:hover{text-decoration:underline}
-.note{background:#fff6d6;border:2px solid var(--gold);border-radius:10px;padding:10px 14px;font-size:14px;margin-top:18px}
-</style>
+<link rel="stylesheet" href="/style.css">
 </head>
-<body class="is-home">
-
-<nav class="menu" aria-label="Site">
-  <div class="wrap">
-    <a href="#home" data-go="home" class="on">Home</a>
-    <a href="#look-after-yourself" data-go="look">Look after yourself</a>
-    <a href="#writing-help" data-go="write">Writing Help</a>
-    <a href="#contact" data-go="contact">Contact me</a>
-  </div>
-</nav>
-
+<body>
 <main>
 <div class="wrap">
-
-  <!-- HOME -->
-  <section class="page on" id="p-home">
     <div class="hero">
-      <img src="images/koala.webp" width="264" height="300" alt="">
+      <img src="/images/koala.webp" width="264" height="300" alt="">
       <div class="mid">
         <h1>Mrs Perkins welcomes you</h1>
         <p>Extra resources to help with your studies. Find your subject below.</p>
         <div class="bar"></div>
       </div>
-      <img src="images/panda.webp" width="280" height="300" alt="">
+      <img src="/images/panda.webp" width="280" height="300" alt="">
     </div>
 
     <div class="subj-bar" style="background:var(--geo-6)"><span class="lbl">Geography</span></div>
@@ -175,64 +57,10 @@ footer a:hover{text-decoration:underline}
 
     <div class="subj-bar" style="background:var(--home-6)"><span class="lbl">For every subject</span></div>
     <div class="tiles cols3">
-      <a class="tile home" style="background:var(--home-2)" href="#look-after-yourself" data-go="look"><span class="t">Look after yourself</span><span class="band lbl">Wellbeing</span></a>
-      <a class="tile home" style="background:var(--home-3)" href="#writing-help" data-go="write"><span class="t">Writing Help</span><span class="band lbl">By subject</span></a>
-      <a class="tile home" style="background:var(--home-4)" href="#contact" data-go="contact"><span class="t">Contact me</span><span class="band lbl">Questions</span></a>
+      <a class="tile home" style="background:var(--home-2)" href="/look-after-yourself/"><span class="t">Look after yourself</span><span class="band lbl">Wellbeing</span></a>
+      <a class="tile home" style="background:var(--home-3)" href="/writing-help/"><span class="t">Writing Help</span><span class="band lbl">By subject</span></a>
+      <a class="tile home" style="background:var(--home-4)" href="/contact/"><span class="t">Contact me</span><span class="band lbl">Questions</span></a>
     </div>
-  </section>
-
-  <!-- LOOK AFTER YOURSELF (E2) -->
-  <section class="page" id="p-look">
-    <div class="page-head"><h1>Look after yourself</h1><p>Small things that make study easier. More topics coming soon.</p></div>
-    <details open><summary>Who to talk to</summary><div class="in">Not sure where to start? Any of these people can help or point you to the right person:
-      <ul><li>Your class teacher</li><li>Your PC teacher</li><li>Your Year Coordinator</li><li>Student Support</li><li>Student Reception</li></ul></div></details>
-  </section>
-
-  <!-- WRITING HELP (F2 shown) -->
-  <section class="page" id="p-write">
-    <div class="page-head"><h1>Writing Help</h1><p>Pick your subject.</p></div>
-    <div class="tiles cols3 wh-tiles" id="wh">
-      <button class="tile geo" data-s="g" style="background:var(--geo-2)"><span class="t">Geography</span><span class="band lbl">3 guides</span></button>
-      <button class="tile bus" data-s="b" style="background:var(--bus-2)"><span class="t">Business Studies</span><span class="band lbl">3 guides</span></button>
-      <button class="tile com" data-s="c" style="background:var(--com-2)"><span class="t">Commerce</span><span class="band lbl">2 guides</span></button>
-    </div>
-    <div class="subpage" id="s-g" style="background:var(--geo-1)"><div class="crumb">Writing Help &gt; <b>Geography</b></div><h2>Geography Writing Help</h2>
-      <div class="tiles cols3">
-        <div class="tile geo soon" style="background:var(--geo-t1)" aria-disabled="true"><span class="t">Paragraphs<span class="pill">Coming soon</span></span><span class="band lbl">Stage 4 and 5</span></div>
-        <div class="tile geo soon" style="background:var(--geo-t2)" aria-disabled="true"><span class="t">Extended response<span class="pill">Coming soon</span></span><span class="band lbl">Stage 5</span></div>
-        <div class="tile geo soon" style="background:var(--geo-t3)" aria-disabled="true"><span class="t">HSC answers<span class="pill">Coming soon</span></span><span class="band lbl">Stage 6</span></div>
-      </div></div>
-    <div class="subpage" id="s-b" style="background:var(--bus-1)"><div class="crumb">Writing Help &gt; <b>Business Studies</b></div><h2>Business Studies Writing Help</h2>
-      <div class="tiles cols3">
-        <div class="tile bus soon" style="background:var(--bus-t1)" aria-disabled="true"><span class="t">Section II<span class="pill">Coming soon</span></span><span class="band lbl">Short answer</span></div>
-        <div class="tile bus soon" style="background:var(--bus-t2)" aria-disabled="true"><span class="t">Section III<span class="pill">Coming soon</span></span><span class="band lbl">Business report</span></div>
-        <div class="tile bus soon" style="background:var(--bus-t3)" aria-disabled="true"><span class="t">Section IV<span class="pill">Coming soon</span></span><span class="band lbl">Essay</span></div>
-      </div></div>
-    <div class="subpage" id="s-c" style="background:var(--com-1)"><div class="crumb">Writing Help &gt; <b>Commerce</b></div><h2>Commerce Writing Help</h2>
-      <div class="tiles cols3">
-        <div class="tile com soon" style="background:var(--com-2)" aria-disabled="true"><span class="t">Short answer<span class="pill">Coming soon</span></span><span class="band lbl">Elective</span></div>
-        <div class="tile com soon" style="background:var(--com-t2)" aria-disabled="true"><span class="t">Extended response<span class="pill">Coming soon</span></span><span class="band lbl">Elective</span></div>
-      </div></div>
-  </section>
-
-  <!-- CONTACT (G2) -->
-  <section class="page" id="p-contact">
-    <div class="page-head"><h1>Contact me</h1></div>
-    <div class="contact">
-      <p>You are on this page because you are one of my students. If you are at school, please come and see me in the staffroom. Otherwise, contact me through the usual school channels.</p>
-      <div class="check"><b>Before you send</b>
-        <p style="margin-top:4px">Remember, this is the unofficial extra help place for you. Please look at the following points first:</p>
-        <ul>
-          <li>Have you checked your school email?</li>
-          <li>Have you checked iLearn and your class page?</li>
-          <li>Try another 3 before me: your notes, this website, then a classmate.</li>
-          <li>Is your question about an assessment? Have the notification open.</li>
-          <li>Need help today? Talk to me or your PC teacher in person.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
 </div>
 </main>
 
@@ -240,41 +68,8 @@ footer a:hover{text-decoration:underline}
   <div class="wrap">
     <span>Mrs Perkins</span>
     <a href="https://ilearn.gosford.spcc.nsw.edu.au/learning/classes">Back to iLearn</a>
-    <span>Last Updated Sun 01/11/26, 7:41pm (AEDT)</span>
+    <span>Last Updated Sun 01/11/26, 7:44pm (AEDT)</span>
   </div>
 </footer>
-
-<script>
-(function(){
-  var map={home:'home','look-after-yourself':'look','writing-help':'write',contact:'contact'};
-  var sub={'writing-help-geography':'g','writing-help-business':'b','writing-help-commerce':'c'};
-  function show(k){
-    document.querySelectorAll('.page').forEach(function(p){p.classList.toggle('on',p.id==='p-'+k)});
-    document.querySelectorAll('.menu a').forEach(function(a){a.classList.toggle('on',a.dataset.go===k)});
-    document.body.classList.toggle('is-home',k==='home');
-    window.scrollTo(0,0);
-  }
-  document.querySelectorAll('[data-go]').forEach(function(a){
-    a.addEventListener('click',function(e){e.preventDefault();show(a.dataset.go);try{history.replaceState(null,'',a.getAttribute('href'))}catch(_){}});
-  });
-  
-  document.querySelectorAll('#wh .tile').forEach(function(b){
-    b.addEventListener('click',function(){
-      document.querySelectorAll('#wh .tile').forEach(function(x){x.classList.toggle('on',x===b)});
-      document.querySelectorAll('.subpage').forEach(function(s){s.classList.toggle('on',s.id==='s-'+b.dataset.s)});
-    });
-  });
-  function pick(s){
-    document.querySelectorAll('#wh .tile').forEach(function(x){x.classList.toggle('on',x.dataset.s===s)});
-    document.querySelectorAll('#tabs button').forEach(function(x){x.classList.toggle('on',x.dataset.s===s)});
-    document.querySelectorAll('.subpage').forEach(function(x){x.classList.toggle('on',x.id==='s-'+s)});
-  }
-  function route(){var h=(location.hash||'').slice(1);
-    if(sub[h]){show('write');pick(sub[h]);} else if(map[h]){show(map[h]);} }
-  document.querySelectorAll('#wh .tile').forEach(function(b){b.addEventListener('click',function(){
-    var n={g:'geography',b:'business',c:'commerce'}[b.dataset.s]; try{history.replaceState(null,'','#writing-help-'+n)}catch(_){} })});
-  route(); window.addEventListener('hashchange',route);
-})();
-</script>
 </body>
 </html>
