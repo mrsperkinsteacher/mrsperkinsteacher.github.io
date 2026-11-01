@@ -157,6 +157,16 @@ footer a { color:var(--lteal); text-decoration:none; }
 .where-pill { display:inline-block; background:var(--lteal); color:var(--navy); font-size:12.5px; font-weight:600; padding:3px 11px; border-radius:20px; margin:8px 6px 0 0; }
 .where-pill.guide { background:#fdf3e3; color:#5a4200; border:1px solid var(--yellow); }
 .tab-btn.active .new-badge { background:var(--navy); color:#fff; }
+.easy-box { background:var(--cream); border:3px solid var(--navy); border-radius:28px; padding:24px 24px 18px; margin:6px 0 22px; }
+.easy-box h3 { margin:0 0 4px; color:var(--navy); font-size:24px; }
+.easy-box .easy-sub { margin:0 0 16px; color:var(--muted); font-size:15px; }
+.easy-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+.easy-pill { display:flex; gap:14px; align-items:flex-start; background:#fff; border:2px solid var(--teal); border-radius:26px; padding:14px 20px 14px 14px; }
+.easy-num { flex:0 0 52px; height:52px; border-radius:50%; background:var(--yellow); color:var(--navy); font-weight:800; font-size:24px; display:flex; align-items:center; justify-content:center; }
+.easy-pill h4 { margin:2px 0 4px; color:var(--teal); font-size:18px; }
+.easy-pill ul { margin:0; padding-left:18px; font-size:15px; line-height:1.45; }
+.easy-pill.wide { grid-column:1 / -1; }
+@media (max-width:720px) { .easy-grid { grid-template-columns:1fr; } .easy-pill { border-radius:32px; } }
 </style>
 </head>
 <body>
@@ -194,6 +204,39 @@ footer a { color:var(--lteal); text-decoration:none; }
     <div class="part-title">
       <h2>Start here</h2>
       <p>The big idea, the dates, your files and the key words.</p>
+    </div>
+  </div>
+
+  <div class="easy-box">
+    <h3>Another way that might help your brain</h3>
+    <p class="easy-sub">The easy way - six steps. Same task, same marks, just simpler to follow.</p>
+    <div class="easy-grid">
+      <div class="easy-pill"><div class="easy-num">1</div><div><h4>Pick and chat</h4><ul>
+        <li>Pick a country.</li>
+        <li>Pick one SDG (1 Poverty, 3 Health, 4 Education or 6 Water).</li>
+        <li>Look at the question ideas on this website.</li>
+        <li>Open the AI and have a chat about your country and your SDG.</li>
+        <li>Ask at least one question about First Nations communities in Australia, so you can compare.</li></ul></div></div>
+      <div class="easy-pill"><div class="easy-num">2</div><div><h4>Copy and paste</h4><ul>
+        <li>Copy the whole chat.</li>
+        <li>Paste it into your transcript document and save it.</li>
+        <li>Don't change anything in it.</li></ul></div></div>
+      <div class="easy-pill"><div class="easy-num">3</div><div><h4>Fill the gaps</h4><ul>
+        <li>Open your submission template and look at the boxes.</li>
+        <li>Missing something? Go back to the same chat and ask more questions.</li>
+        <li>Copy and paste the whole chat again so your transcript has everything.</li></ul></div></div>
+      <div class="easy-pill"><div class="easy-num">4</div><div><h4>Save every website</h4><ul>
+        <li>Every time you visit a website to check a number or fact, save the link.</li>
+        <li>Save every single one.</li>
+        <li>Put them all in a list. This becomes your sources page.</li></ul></div></div>
+      <div class="easy-pill"><div class="easy-num">5</div><div><h4>Prove it or bust it</h4><ul>
+        <li>Check things the AI told you against real websites.</li>
+        <li>Was the AI right, wrong or only half right?</li>
+        <li>Ask the AI one question two opposite ways, e.g. "How has aid HELPED..." then "How has aid HARMED...". Did the answer flip? Whose voices were missing?</li></ul></div></div>
+      <div class="easy-pill"><div class="easy-num">6</div><div><h4>Write it up (800-1000 words)</h4><ul>
+        <li>Fill in each part of the template, talking about what you discovered.</li>
+        <li>What did the AI get right? What did it get wrong?</li>
+        <li>What did it leave out? Would you trust it?</li></ul></div></div>
     </div>
   </div>
 
