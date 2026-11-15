@@ -148,6 +148,28 @@ body{font-family:Inter,system-ui,sans-serif!important;color:#22303a}
 .s6ft .nm{font-size:12px;opacity:.8}.s6ft .cr{font-size:11px;opacity:.6;margin-top:6px}.s6ft .cr a{color:inherit}
 @media(max-width:700px){.s6hero h1{font-size:46px}.s6t{padding:26px 22px}.s6hero::after{background:rgba(251,248,242,.88)}.fe{padding:22px}.fe-row{grid-template-columns:1fr;gap:2px}.fe-arrow{display:none}}
 </style>
+<style id="mp-s6fix">
+.main{margin-left:auto!important;margin-right:auto!important}
+h1,h2,h3,.stage-quote,.fe-from,.s6t p{text-wrap:balance}
+p,li,.fe-to,.fe-intro{text-wrap:pretty}
+.stage-quote{max-width:820px;margin-left:auto!important;margin-right:auto!important}
+.fe .fe-big{font-size:clamp(34px,5vw,58px);line-height:1.08;margin:0 0 10px;max-width:640px}
+.fe .fe-k{font-size:13px}
+#from-elective{scroll-margin-top:20px}
+.stage-tabs{margin-top:34px!important}
+</style>
+<style id="mp-s6river">
+.focus-grid{grid-template-columns:repeat(3,1fr)!important;gap:38px!important;position:relative;padding:6px 0}
+.focus-grid:has(> .focus-card:nth-child(4)){grid-template-columns:repeat(4,1fr)!important}
+.focus-grid::before{content:"";position:absolute;left:-18px;right:-18px;top:92px;height:46px;z-index:0;opacity:.9;
+background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='46' viewBox='0 0 240 46'%3E%3Cpath d='M0 23 C40 3 80 3 120 23 S200 43 240 23' fill='none' stroke='%23c9a23f' stroke-width='14' stroke-linecap='round' opacity='.55'/%3E%3Cpath d='M0 23 C40 3 80 3 120 23 S200 43 240 23' fill='none' stroke='%23f3dc93' stroke-width='4' opacity='.9'/%3E%3C/svg%3E") repeat-x left center/240px 46px}
+.focus-card{position:relative;z-index:1;overflow:visible!important}
+.focus-card-top{border-radius:4px 4px 0 0}
+.focus-card:not(:last-child)::after{content:"\2192";position:absolute;right:-33px;top:96px;width:28px;height:28px;border-radius:50%;background:#b8912f;color:#fff;font:700 16px/28px Inter,sans-serif;text-align:center;box-shadow:0 2px 8px rgba(160,125,36,.35);z-index:2}
+.focus-card-title{font-size:20px!important;line-height:1.2}
+@media(max-width:980px){.focus-grid,.focus-grid:has(> .focus-card:nth-child(4)){grid-template-columns:repeat(2,1fr)!important}.focus-card:nth-child(2n)::after{display:none}}
+@media(max-width:620px){.focus-grid,.focus-grid:has(> .focus-card:nth-child(4)){grid-template-columns:1fr!important;gap:30px!important}.focus-grid::before{display:none}.focus-card:not(:last-child)::after{content:"\2193";right:calc(50% - 14px);top:auto;bottom:-29px;display:block!important}}
+</style>
 </head>
 <body>
 <div class="s6wrap"><p class="s6trail"><a href="https://mrsperkinsteacher.github.io/">Mrs Perkins home</a><span>/</span>Stage 6 Geography</p>
@@ -160,15 +182,6 @@ body{font-family:Inter,system-ui,sans-serif!important;color:#22303a}
     <div class="s6btns"><a class="s6b solid" href="https://mrsperkinsteacher.github.io/geography/syllabus.html">Syllabus and Expectations</a><a class="s6b" href="#from-elective">Coming from the Stage 5 Elective?</a></div>
   </div>
 </header></div>
-<div class="stage6-banner">
-  <div class="stage6-banner-inner">
-    <div class="stage6-banner-icon"></div>
-    <div class="stage6-banner-text">
-      <strong>About this page:</strong> All information here is drawn directly from the NESA syllabus, broken down to help students understand the processes and subject choices available in Stage 6 Geography. For information about what Stage 6 Geography looks like at your school (including subject selection, assessment schedules, and entry requirements), your best contact is your school's <strong>Instructional Leader for HSIE</strong> or <strong>Director of Studies</strong>.
-    </div>
-  </div>
-</div>
-
 <div class="main">
 
   <div class="stage-tabs">
@@ -399,8 +412,8 @@ body{font-family:Inter,system-ui,sans-serif!important;color:#22303a}
 
 
   <section class="fe" id="from-elective">
-    <p class="fe-k">Coming from the Stage 5 Elective?</p>
-    <h2>Where each focus area leads</h2>
+    <h2 class="fe-big">Coming from the Stage 5 Elective?</h2>
+    <p class="fe-k">Where each focus area leads</p>
     <p class="fe-intro">Each Stage 5 Elective focus area builds skills and ideas you will use again in Stage 6.</p>
     <div class="fe-list"><div class="fe-row"><span class="fe-from">Extreme Environments</span><span class="fe-arrow">&rarr;</span><span class="fe-to">Earth's Natural Systems (Year 11)<br>Ecosystems and Global Biodiversity (Year 12)</span></div><div class="fe-row"><span class="fe-from">Geopolitics</span><span class="fe-arrow">&rarr;</span><span class="fe-to">Global Sustainability (Year 12)<br>People, Patterns and Processes (Year 11)</span></div><div class="fe-row"><span class="fe-from">Global Citizenship</span><span class="fe-arrow">&rarr;</span><span class="fe-to">Human-Environment Interactions (Year 11)<br>Global Sustainability (Year 12)</span></div><div class="fe-row"><span class="fe-from">Oceanography</span><span class="fe-arrow">&rarr;</span><span class="fe-to">Earth's Natural Systems (Year 11)<br>Ecosystems and Global Biodiversity (Year 12)</span></div><div class="fe-row"><span class="fe-from">Australia's Neighbours</span><span class="fe-arrow">&rarr;</span><span class="fe-to">People, Patterns and Processes (Year 11)<br>Global Sustainability (Year 12)</span></div><div class="fe-row"><span class="fe-from">Primary Production</span><span class="fe-arrow">&rarr;</span><span class="fe-to">Earth's Natural Systems (Year 11)<br>Ecosystems and Global Biodiversity (Year 12)</span></div></div>
     <a class="fe-back" href="https://mrsperkinsteacher.github.io/stage5geo/elective/">&larr; Back to the Stage 5 Elective</a>
