@@ -12,7 +12,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mrs Perkins Teacher</title>
-<meta name="description" content="Mrs Perkins - extra resources to help with your studies: Geography, Business Studies, Commerce and Christian Life Studies.">
+<meta name="description" content="Mrs Perkins - extra resources to help with your studies: Geography, Business Studies and Christian Life Studies.">
 <!-- Clip art: "Pandas" by WondersArtist (etsy.com/shop/WondersArtist), Register SET-066; "Watercolour Australia" koalas by MistysDigitals (etsy.com/shop/MistysDigitals), Register SET-029. -->
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <style>
@@ -34,6 +34,10 @@ a:focus-visible{outline:3px solid #ffc20e;outline-offset:3px}
 .hero .sig{font-family:Caveat,cursive;font-size:30px;color:#ffc20e;margin-top:10px}
 .peek{position:absolute!important;width:92px;right:46px;bottom:-30px;transform:rotate(-6deg);transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
 .hero:hover .peek{transform:rotate(0) translateY(-22px)}
+.pk2{right:150px;width:80px;bottom:-26px;transform:rotate(5deg)}
+.pk3{right:236px;width:70px;bottom:-24px;transform:rotate(-4deg)}
+.hero:hover .pk2{transform:rotate(0) translateY(-18px)}
+.hero:hover .pk3{transform:rotate(0) translateY(-16px)}
 .bar{display:flex;align-items:center;gap:10px;margin:30px 0 12px}
 .bar .dot{width:14px;height:14px;border-radius:50%;background:var(--c)}
 .bar h2{font-size:28px}
@@ -55,21 +59,19 @@ footer a{color:#00645f}
 footer .cr{flex-basis:100%;font-size:11px;opacity:.65;text-align:center}
 .fp{position:absolute;width:54px;right:24px;top:-50px;pointer-events:none}
 @media(max-width:900px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.hero{padding:30px 22px 34px}.peek{width:70px;right:16px}.pair{grid-template-columns:1fr}}
+@media(max-width:560px){.hero{padding:30px 22px 34px}.peek{width:62px;right:12px}.pk2{right:78px;width:56px}.pk3{display:none}.pair{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <main>
 <div class="wrap">
-<header class="hero"><p class="lbl">Mrs Perkins Teacher</p><h1>Welcome to <em>your</em> study space</h1><p>Extra resources to help with your studies. Pick your subject and dive in.</p><p class="sig">Mrs Perkins</p><img class="peek" src="/images/wk20.webp" alt=""></header>
+<header class="hero"><p class="lbl">Mrs Perkins Teacher</p><h1>Welcome to <em>your</em> study space</h1><p>Extra resources to help with your studies. Pick your subject and dive in.</p><p class="sig">Mrs Perkins</p><img class="peek" src="/images/wk20.webp" alt=""><img class="peek pk2" src="/images/wp29.webp" alt=""><img class="peek pk3" src="/images/wp5.webp" alt=""></header>
 <div class="bar" style="--c:#004b5d"><span class="dot"></span><h2>Geography</h2></div>
 <div class="tiles"><a class="tile" style="background:#c4e3de" href="https://mrsperkinsteacher.github.io/stage4geo/"><img class="sneak" src="/images/wp29.webp" alt=""><span class="lbl">Years 7-8</span><h3>Stage 4</h3></a><a class="tile" style="background:#9fd1d2" href="https://mrsperkinsteacher.github.io/stage5geo/"><img class="sneak" src="/images/wk20.webp" alt=""><span class="lbl">Years 9-10</span><h3>Stage 5</h3></a><a class="tile" style="background:#79bec5" href="https://mrsperkinsteacher.github.io/stage5geo/elective/"><img class="sneak" src="/images/wp26.webp" alt=""><span class="lbl">Years 9-10</span><h3>Stage 5 Elective</h3></a><a class="tile" style="background:#54acb9" href="https://mrsperkinsteacher.github.io/stage6geo/"><img class="sneak" src="/images/wk19.webp" alt=""><span class="lbl">Years 11-12</span><h3>Stage 6</h3></a><a class="tile" style="background:#c4e3de" href="https://mrsperkinsteacher.github.io/geography/"><img class="sneak" src="/images/wp5.webp" alt=""><span class="lbl">Videos, news, sources</span><h3>Geography Resources</h3></a></div>
 <div class="bar" style="--c:#6b6420"><span class="dot"></span><h2>Business Studies</h2></div>
 <div class="tiles"><a class="tile" style="background:#fcf8c6" href="https://mrsperkinsteacher.github.io/business/year11.html"><img class="sneak" src="/images/wk20.webp" alt=""><span class="lbl">Year 11</span><h3>Preliminary</h3></a><a class="tile" style="background:#f9f2a2" href="https://mrsperkinsteacher.github.io/business/year12.html"><img class="sneak" src="/images/wp26.webp" alt=""><span class="lbl">Year 12</span><h3>HSC</h3></a></div>
-<div class="pair">
-<div><div class="bar" style="--c:#2e5e22"><span class="dot"></span><h2>Commerce</h2></div><div class="tiles"><div class="tile soon" style="background:#d6ecc3" aria-disabled="true"><img class="sneak" src="/images/wk19.webp" alt=""><span class="lbl">Years 9-10</span><h3>Elective<br><span class=pill>To be decided in 2027</span></h3></div></div></div>
-<div><div class="bar" style="--c:#46336b"><span class="dot"></span><h2>Christian Life Studies</h2></div><div class="tiles"><div class="tile soon" style="background:#e2d3ef" aria-disabled="true"><img class="sneak" src="/images/wp5.webp" alt=""><span class="lbl">All years</span><h3>CLS<br><span class=pill>Coming soon</span></h3></div></div></div>
-</div>
+<div class="bar" style="--c:#46336b"><span class="dot"></span><h2>Christian Life Studies</h2></div>
+<div class="tiles"><div class="tile soon" style="background:#e2d3ef" aria-disabled="true"><img class="sneak" src="/images/wp5.webp" alt=""><span class="lbl">All years</span><h3>CLS<br><span class=pill>Coming soon</span></h3></div></div>
 <div class="bar" style="--c:#6e3d5a"><span class="dot"></span><h2>For every subject</h2></div>
 <div class="tiles three"><a class="tile" style="background:#f4d9da" href="/wellbeing/"><img class="sneak" src="/images/wp29.webp" alt=""><span class="lbl">Wellbeing</span><h3>Look after yourself</h3></a><a class="tile" style="background:#e8b7bc" href="/writinghelp/"><img class="sneak" src="/images/wk20.webp" alt=""><span class="lbl">By subject</span><h3>Writing Help</h3></a><a class="tile" style="background:#d48e98" href="/contact/"><img class="sneak" src="/images/wp26.webp" alt=""><span class="lbl">Questions</span><h3>Contact me</h3></a></div>
 <p class="enc" id="enc"></p>
