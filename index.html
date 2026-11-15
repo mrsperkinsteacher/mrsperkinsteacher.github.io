@@ -97,6 +97,19 @@ a{color:inherit} h1,h2,h3{text-wrap:balance} p,li{text-wrap:pretty}
 .mini{margin:0 0 6px;font-size:12.5px;line-height:1.4} .mini b{color:#003146}
 .row2{display:grid;grid-template-columns:2.2fr 1fr;gap:22px;margin-top:26px;align-items:start}
 .stack{display:grid;gap:18px}
+.pin{position:absolute;top:-24px;left:50%;width:52px;height:52px;margin-left:-26px;z-index:7;transition:transform .25s}
+.pin img,.pin svg{display:block;width:52px;height:52px;border-radius:50%;border:3px solid #fff;box-shadow:0 5px 8px rgba(0,0,0,.35),inset 0 0 0 1px rgba(0,0,0,.08)}
+.pin svg{border:0}
+.pin::after{content:"";position:absolute;left:50%;top:44px;width:4px;height:14px;margin-left:-2px;background:linear-gradient(#c9ccd1,#7d838a);border-radius:2px;z-index:-1}
+.card:hover .pin,.pol:hover .pin,.pin:hover{transform:rotate(-10deg) scale(1.12)}
+.goat{position:absolute;right:30px;top:-78px;width:140px;z-index:6;filter:drop-shadow(0 8px 10px rgba(0,0,0,.25));transition:transform .3s}
+.goat:hover{transform:rotate(-6deg) translateY(-6px)}
+.goat-say{position:absolute;right:170px;top:-40px;background:#fff;border-radius:18px;padding:8px 14px;font:700 20px Caveat,cursive;color:#00645f;box-shadow:0 6px 12px rgba(0,0,0,.15);transform:rotate(-3deg);z-index:6}
+.goat-say::after{content:"";position:absolute;right:-10px;top:16px;border:8px solid transparent;border-left:12px solid #fff;border-right:0}
+.stk{position:absolute;z-index:6;filter:drop-shadow(0 6px 8px rgba(0,0,0,.25));transition:transform .3s}
+.stk:hover{transform:rotate(0) scale(1.05)!important}
+.sotw{position:absolute;right:34px;top:14px;display:block;width:120px;text-decoration:none;transform:rotate(8deg);transition:transform .3s;z-index:5}
+.sotw:hover{transform:rotate(0) scale(1.06)}
 /* elective tickets */
 .el{display:grid;grid-template-columns:150px 1fr;background:#2b2018;color:#f3e2c8;overflow:hidden}
 .el img{width:100%;height:100%;object-fit:cover}
@@ -186,7 +199,7 @@ footer{text-align:center;padding:0 20px 46px;color:#4a3418}
 .foot{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;align-items:center;margin:16px 0 8px;font-size:13px}
 .cr{font-size:11.5px;opacity:.85;max-width:900px;margin:8px auto 0} .cr a{color:inherit}
 @media(max-width:980px){
- .row4{grid-template-columns:1fr 1fr} .row2{grid-template-columns:1fr}
+ .row4{grid-template-columns:1fr 1fr} .row2{grid-template-columns:1fr} .goat{width:110px;top:-20px} .goat-say{display:none} .sotw{position:static;margin:16px auto 0} .busq{margin:16px 0 0}
  .hero{grid-template-columns:1fr} .collage{height:420px} .tabs{display:none}
  .geo{grid-template-columns:1fr 1fr}
  .g-s4,.g-s4n,.g-s5,.g-s5n,.g-syl,.g-el,.g-s6,.g-res,.g-jour{grid-column:auto;margin-top:0}
@@ -202,7 +215,7 @@ footer{text-align:center;padding:0 20px 46px;color:#4a3418}
 </head>
 <body>
 <div class="wrap">
-<div class="top"><span>MRS PERKINS TEACHER</span><span class="stamp">Last Updated Sun 15/11/26, 10:26pm</span></div>
+<div class="top"><span>MRS PERKINS TEACHER</span><span class="stamp">Last Updated Sun 15/11/26, 10:33pm</span></div>
 
 <!-- ============ COVER PAGE ============ -->
 <section class="page grid" id="top">
@@ -214,12 +227,13 @@ footer{text-align:center;padding:0 20px 46px;color:#4a3418}
  </nav>
  <div class="hero">
   <div>
+   <div style="position:relative"><span class="pin" style="left:auto;right:30px;margin-left:0;top:-18px"><img src="/images/scrap/pin-goat.webp" alt=""></span>
    <div class="torn">
     <small>WELCOME TO</small>
     <h1><span class="mark">your</span> extra revision space</h1>
     <p>Extra revision, practice and resources to back up what we do in class - Geography and Business Studies, all in one scrapbook. Flip to a page and dive in.</p>
     <p class="sig">Mrs Perkins</p>
-   </div>
+   </div></div>
    <div class="chips">
     <span class="chip" style="--r:-2deg"><b>Geography</b> Stage 3 to Year 12</span>
     <span class="chip" style="--r:1.5deg"><b>4</b> rivers of big ideas</span>
@@ -230,18 +244,17 @@ footer{text-align:center;padding:0 20px 46px;color:#4a3418}
   </div>
   <div class="collage">
    <a class="pol c1" href="https://mrsperkinsteacher.github.io/stage4geo/"><img src="/images/scrap/s4-land.webp" alt="Painted landscape with a river"><span>Stage 4</span></a>
-   <a class="pol c2" href="https://mrsperkinsteacher.github.io/stage5geo/elective/"><img src="/images/scrap/el-hero.webp" alt="Steampunk hot air balloons" style="aspect-ratio:4/3;object-fit:cover"><span>The Elective</span></a>
-   <a class="pol c3" href="https://mrsperkinsteacher.github.io/stage6geo/"><img src="/images/scrap/s6-gold.webp" alt="Gold tree painting"><span>Stage 6</span></a>
-   <a class="pol c4" href="https://mrsperkinsteacher.github.io/geography/pathways.html"><img src="/images/scrap/river.webp" alt="Painted river" style="aspect-ratio:4/3;object-fit:cover"><span>How it all links</span></a>
+   <a class="pol c2" href="https://mrsperkinsteacher.github.io/stage5geo/elective/"><span class="pin" style=""><img src="/images/scrap/pin-koala.webp" alt=""></span><img src="/images/scrap/el-hero.webp" alt="Steampunk hot air balloons" style="aspect-ratio:4/3;object-fit:cover"><span>The Elective</span></a>
+   <a class="pol c3" href="https://mrsperkinsteacher.github.io/stage6geo/"><span class="pin" style=""><img src="/images/scrap/pin-panda.webp" alt=""></span><img src="/images/scrap/s6-gold.webp" alt="Gold tree painting"><span>Stage 6</span></a>
+   <a class="pol c4" href="https://mrsperkinsteacher.github.io/geography/pathways.html"><span class="pin globepin" style=""><svg viewBox="0 0 46 46" class="globe" aria-hidden="true"><defs><radialGradient id="gl" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#8fd3e8"/><stop offset="1" stop-color="#1f6f9c"/></radialGradient></defs><circle cx="23" cy="23" r="21" fill="url(#gl)" stroke="#fff" stroke-width="3"/><path d="M12 14c4-3 9-2 11 1s-2 5-5 6-4 4-2 7-3 3-5 0-3-11 1-14zM27 10c4 0 8 3 9 7s-2 4-4 3-3 2-1 5 0 6-3 7-4-3-3-6 0-6-2-8 0-8 4-8z" fill="#3fae5a" opacity=".95"/><ellipse cx="16" cy="13" rx="6" ry="3" fill="#fff" opacity=".35" transform="rotate(-25 16 13)"/></svg></span><img src="/images/scrap/river.webp" alt="Painted river" style="aspect-ratio:4/3;object-fit:cover"><span>How it all links</span></a>
    <span class="tape p" style="left:20%;top:1%;transform:rotate(-12deg);width:90px"></span>
-   <span class="tape t" style="left:66%;top:-2%;transform:rotate(8deg);width:90px"></span>
    <img class="bear" src="/images/wk20.webp" alt="" style="width:92px;right:-6px;top:-30px">
    <img class="bear" src="/images/wp29.webp" alt="" style="width:78px;left:2%;bottom:-12px">
   </div>
  </div>
   <a class="rivers feat" href="https://mrsperkinsteacher.github.io/geography/pathways.html">
    <span class="tape str" style="left:46%;top:-14px;transform:rotate(-2deg)"></span>
-   <span class="burst">START<br>HERE</span><div class="lab"><div><p class="fk">THE BIG PICTURE</p><h3>How it all links</h3><p class="fs">Four rivers of big ideas flow from Middle School to the HSC. See every unit, the SDGs it connects to, places to explore and the skills you build.</p></div><span class="go">Follow the rivers &rarr;</span></div>
+   <span class="burst">START<br>HERE</span><img class="stk" src="/images/scrap/geo-everything-is-connected.webp" alt="Geo says: Everything is connected." style="width:270px;left:-30px;bottom:-34px;transform:rotate(-5deg)"><div class="lab"><div><p class="fk">THE BIG PICTURE</p><h3>How it all links</h3><p class="fs">Four rivers of big ideas flow from Middle School to the HSC. See every unit, the SDGs it connects to, places to explore and the skills you build.</p></div><span class="go">Follow the rivers &rarr;</span></div>
    <svg viewBox="0 0 1000 150" style="max-height:120px" aria-label="Four coloured rivers running from Stage 3 to Year 12">
     <text x="40" y="14" class="rt">STAGE 3</text><text x="220" y="14" class="rt">STAGE 4</text><text x="400" y="14" class="rt">STAGE 5</text><text x="575" y="14" class="rt">ELECTIVE</text><text x="760" y="14" class="rt">YEAR 11</text><text x="920" y="14" class="rt">YEAR 12</text>
     <path d="M20 38 C 120 24, 160 52, 260 38 S 420 24, 500 38 S 660 52, 760 38 S 900 24, 990 38" fill="none" stroke="#d55a1f" stroke-width="9" stroke-linecap="round" stroke-opacity=".9"/><path class="flow" d="M20 38 C 120 24, 160 52, 260 38 S 420 24, 500 38 S 660 52, 760 38 S 900 24, 990 38" fill="none" stroke="#fff" stroke-width="2.2" stroke-dasharray="2 16" stroke-linecap="round"/><circle cx="60" cy="38" r="7" fill="#fff" stroke="#d55a1f" stroke-width="4"/><circle cx="245" cy="38" r="7" fill="#fff" stroke="#d55a1f" stroke-width="4"/><circle cx="425" cy="38" r="7" fill="#fff" stroke="#d55a1f" stroke-width="4"/><circle cx="600" cy="38" r="7" fill="#fff" stroke="#d55a1f" stroke-width="4"/><circle cx="785" cy="38" r="7" fill="#fff" stroke="#d55a1f" stroke-width="4"/><circle cx="945" cy="38" r="7" fill="#fff" stroke="#d55a1f" stroke-width="4"/><path d="M20 68 C 120 54, 160 82, 260 68 S 420 54, 500 68 S 660 82, 760 68 S 900 54, 990 68" fill="none" stroke="#892338" stroke-width="9" stroke-linecap="round" stroke-opacity=".9"/><path class="flow" d="M20 68 C 120 54, 160 82, 260 68 S 420 54, 500 68 S 660 82, 760 68 S 900 54, 990 68" fill="none" stroke="#fff" stroke-width="2.2" stroke-dasharray="2 16" stroke-linecap="round"/><circle cx="60" cy="68" r="7" fill="#fff" stroke="#892338" stroke-width="4"/><circle cx="245" cy="68" r="7" fill="#fff" stroke="#892338" stroke-width="4"/><circle cx="425" cy="68" r="7" fill="#fff" stroke="#892338" stroke-width="4"/><circle cx="600" cy="68" r="7" fill="#fff" stroke="#892338" stroke-width="4"/><circle cx="785" cy="68" r="7" fill="#fff" stroke="#892338" stroke-width="4"/><circle cx="945" cy="68" r="7" fill="#fff" stroke="#892338" stroke-width="4"/><path d="M20 98 C 120 84, 160 112, 260 98 S 420 84, 500 98 S 660 112, 760 98 S 900 84, 990 98" fill="none" stroke="#00645f" stroke-width="9" stroke-linecap="round" stroke-opacity=".9"/><path class="flow" d="M20 98 C 120 84, 160 112, 260 98 S 420 84, 500 98 S 660 112, 760 98 S 900 84, 990 98" fill="none" stroke="#fff" stroke-width="2.2" stroke-dasharray="2 16" stroke-linecap="round"/><circle cx="60" cy="98" r="7" fill="#fff" stroke="#00645f" stroke-width="4"/><circle cx="245" cy="98" r="7" fill="#fff" stroke="#00645f" stroke-width="4"/><circle cx="425" cy="98" r="7" fill="#fff" stroke="#00645f" stroke-width="4"/><circle cx="600" cy="98" r="7" fill="#fff" stroke="#00645f" stroke-width="4"/><circle cx="785" cy="98" r="7" fill="#fff" stroke="#00645f" stroke-width="4"/><circle cx="945" cy="98" r="7" fill="#fff" stroke="#00645f" stroke-width="4"/><path d="M20 128 C 120 114, 160 142, 260 128 S 420 114, 500 128 S 660 142, 760 128 S 900 114, 990 128" fill="none" stroke="#1f8ea3" stroke-width="9" stroke-linecap="round" stroke-opacity=".9"/><path class="flow" d="M20 128 C 120 114, 160 142, 260 128 S 420 114, 500 128 S 660 142, 760 128 S 900 114, 990 128" fill="none" stroke="#fff" stroke-width="2.2" stroke-dasharray="2 16" stroke-linecap="round"/><circle cx="60" cy="128" r="7" fill="#fff" stroke="#1f8ea3" stroke-width="4"/><circle cx="245" cy="128" r="7" fill="#fff" stroke="#1f8ea3" stroke-width="4"/><circle cx="425" cy="128" r="7" fill="#fff" stroke="#1f8ea3" stroke-width="4"/><circle cx="600" cy="128" r="7" fill="#fff" stroke="#1f8ea3" stroke-width="4"/><circle cx="785" cy="128" r="7" fill="#fff" stroke="#1f8ea3" stroke-width="4"/><circle cx="945" cy="128" r="7" fill="#fff" stroke="#1f8ea3" stroke-width="4"/>
@@ -255,15 +268,16 @@ footer{text-align:center;padding:0 20px 46px;color:#4a3418}
 <section class="page" id="geography">
  <span class="tape g" style="left:6%;top:-14px;transform:rotate(-4deg)"></span>
  <span class="tape" style="right:8%;top:-12px;transform:rotate(5deg)"></span>
- <div class="sec-title"><h2>Geography</h2><p>From Middle School to the HSC - every unit flows into the next</p></div>
+ <span class="goat-say">Let's explore!</span><img class="goat" src="/images/scrap/geo-goat.webp" alt="Geo the G.O.A.T., the Geography mascot, waving">
+ <div class="sec-title" style="padding-right:170px"><h2>Geography</h2><p>From Middle School to the HSC - every unit flows into the next</p></div>
  <div class="row4">
-  <a class="card st4" href="https://mrsperkinsteacher.github.io/stage4geo/" style="--c:#1f8ea3;transform:rotate(-1.5deg)"><img src="/images/scrap/s4-water.webp" alt="Painted river gorge"><div class="cb"><p class="yr">Years 7-8</p><h3>Stage 4</h3><ul><li>Landscapes and landforms</li><li>Liveability of places</li><li>Water in the world</li><li>Interconnections and trade</li></ul><span class="inside">Lessons + revision slideshows</span></div></a>
-  <a class="card st4" href="https://mrsperkinsteacher.github.io/stage5geo/" style="--c:#00645f;transform:rotate(1.2deg)"><img src="/images/scrap/s5-cp.webp" alt="Painted hillside town"><div class="cb"><p class="yr">Years 9-10</p><h3>Stage 5</h3><ul><li>Biomes and sustainable agriculture</li><li>Changing places</li><li>Environmental change and management</li><li>Human wellbeing</li></ul><span class="inside">Weekly lessons + tasks</span></div></a>
-  <a class="card st4 dark" href="https://mrsperkinsteacher.github.io/stage5geo/elective/" style="--c:#e9b44c;transform:rotate(-1deg)"><img src="/images/scrap/el-a.webp" alt="Steampunk balloon over a city" style="aspect-ratio:4/3;object-fit:cover"><div class="cb"><p class="yr">Years 9-10 - extra choice</p><h3>Elective</h3><div class="tix"><i style="--r:-2deg">Extreme environments</i><i style="--r:1deg">Geopolitics</i><i style="--r:-1deg">Global citizenship</i><i style="--r:2deg">Oceanography</i><i style="--r:-1.5deg">Australia's neighbours</i><i style="--r:1deg">Primary production</i></div></div></a>
-  <a class="card st4 six" href="https://mrsperkinsteacher.github.io/stage6geo/" style="--c:#a07d24;transform:rotate(1.4deg)"><div class="halves"><img src="/images/scrap/s6-gold.webp" alt="Gold tree painting"><img src="/images/scrap/s6-white.webp" alt="White cosmos flowers"></div><div class="cb"><p class="yr">Years 11-12</p><h3>Stage 6</h3><p class="mini"><b>Year 11:</b> Earth's Natural Systems, People Patterns and Processes, Human-Environment Interactions, Geographical Investigation</p><p class="mini"><b>Year 12:</b> Global Sustainability, Rural and Urban Places, Ecosystems and Global Biodiversity</p></div></a>
+  <a class="card st4" href="https://mrsperkinsteacher.github.io/stage4geo/" style="--c:#1f8ea3;transform:rotate(-1.5deg)"><span class="pin globepin" style=""><svg viewBox="0 0 46 46" class="globe" aria-hidden="true"><defs><radialGradient id="gl" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#8fd3e8"/><stop offset="1" stop-color="#1f6f9c"/></radialGradient></defs><circle cx="23" cy="23" r="21" fill="url(#gl)" stroke="#fff" stroke-width="3"/><path d="M12 14c4-3 9-2 11 1s-2 5-5 6-4 4-2 7-3 3-5 0-3-11 1-14zM27 10c4 0 8 3 9 7s-2 4-4 3-3 2-1 5 0 6-3 7-4-3-3-6 0-6-2-8 0-8 4-8z" fill="#3fae5a" opacity=".95"/><ellipse cx="16" cy="13" rx="6" ry="3" fill="#fff" opacity=".35" transform="rotate(-25 16 13)"/></svg></span><img src="/images/scrap/s4-water.webp" alt="Painted river gorge"><div class="cb"><p class="yr">Years 7-8</p><h3>Stage 4</h3><ul><li>Landscapes and landforms</li><li>Liveability of places</li><li>Water in the world</li><li>Interconnections and trade</li></ul><span class="inside">Lessons + revision slideshows</span></div></a>
+  <a class="card st4" href="https://mrsperkinsteacher.github.io/stage5geo/" style="--c:#00645f;transform:rotate(1.2deg)"><span class="pin" style=""><img src="/images/scrap/pin-koala2.webp" alt=""></span><img src="/images/scrap/s5-cp.webp" alt="Painted hillside town"><div class="cb"><p class="yr">Years 9-10</p><h3>Stage 5</h3><ul><li>Biomes and sustainable agriculture</li><li>Changing places</li><li>Environmental change and management</li><li>Human wellbeing</li></ul><span class="inside">Weekly lessons + tasks</span></div></a>
+  <a class="card st4 dark" href="https://mrsperkinsteacher.github.io/stage5geo/elective/" style="--c:#e9b44c;transform:rotate(-1deg)"><span class="pin" style=""><img src="/images/scrap/pin-goat2.webp" alt=""></span><img src="/images/scrap/el-a.webp" alt="Steampunk balloon over a city" style="aspect-ratio:4/3;object-fit:cover"><div class="cb"><p class="yr">Years 9-10 - extra choice</p><h3>Elective</h3><div class="tix"><i style="--r:-2deg">Extreme environments</i><i style="--r:1deg">Geopolitics</i><i style="--r:-1deg">Global citizenship</i><i style="--r:2deg">Oceanography</i><i style="--r:-1.5deg">Australia's neighbours</i><i style="--r:1deg">Primary production</i></div></div></a>
+  <a class="card st4 six" href="https://mrsperkinsteacher.github.io/stage6geo/" style="--c:#a07d24;transform:rotate(1.4deg)"><span class="pin" style=""><img src="/images/scrap/pin-panda2.webp" alt=""></span><div class="halves"><img src="/images/scrap/s6-gold.webp" alt="Gold tree painting"><img src="/images/scrap/s6-white.webp" alt="White cosmos flowers"></div><div class="cb"><p class="yr">Years 11-12</p><h3>Stage 6</h3><p class="mini"><b>Year 11:</b> Earth's Natural Systems, People Patterns and Processes, Human-Environment Interactions, Geographical Investigation</p><p class="mini"><b>Year 12:</b> Global Sustainability, Rural and Urban Places, Ecosystems and Global Biodiversity</p></div></a>
  </div>
  <div class="row2">
-  <a class="card clip" href="https://mrsperkinsteacher.github.io/geography/" style="transform:rotate(-.8deg)"><img src="/images/scrap/news.webp" alt="Mixed media newspaper collage"><div><p class="k">READ ALL ABOUT IT</p><div class="mast">Geography Resources</div>
+  <a class="card clip" href="https://mrsperkinsteacher.github.io/geography/" style="transform:rotate(-.8deg)"><span class="pin globepin" style="left:18%"><svg viewBox="0 0 46 46" class="globe" aria-hidden="true"><defs><radialGradient id="gl" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#8fd3e8"/><stop offset="1" stop-color="#1f6f9c"/></radialGradient></defs><circle cx="23" cy="23" r="21" fill="url(#gl)" stroke="#fff" stroke-width="3"/><path d="M12 14c4-3 9-2 11 1s-2 5-5 6-4 4-2 7-3 3-5 0-3-11 1-14zM27 10c4 0 8 3 9 7s-2 4-4 3-3 2-1 5 0 6-3 7-4-3-3-6 0-6-2-8 0-8 4-8z" fill="#3fae5a" opacity=".95"/><ellipse cx="16" cy="13" rx="6" ry="3" fill="#fff" opacity=".35" transform="rotate(-25 16 13)"/></svg></span><img src="/images/scrap/news.webp" alt="Mixed media newspaper collage"><div><p class="k">READ ALL ABOUT IT</p><div class="mast">Geography Resources</div>
    <ul><li><b>This Week</b> - news with a geography twist</li><li><b>Videos</b> - skills and study playlists</li><li><b>Sources</b> - 28 free, trusted sites</li><li><b>SDGs</b> - all 17 goals</li><li><b>The Three Films</b> - choose your film</li><li><b>Geography Fun</b> - games, maps, records</li></ul></div></a>
   <div class="stack">
    <a class="card sticky p" href="https://mrsperkinsteacher.github.io/geography/syllabus.html" style="text-decoration:none;transform:rotate(2deg)"><h4>Syllabus and Expectations</h4><p style="margin:0">What you study, what is expected and how you are assessed - every stage.</p></a>
@@ -277,7 +291,7 @@ footer{text-align:center;padding:0 20px 46px;color:#4a3418}
 <!-- ============ BUSINESS ============ -->
 <section class="page lined bus" id="business" style="background-color:#fff9c4;background-image:repeating-linear-gradient(#fff9c4 0 31px,#bcd3e3 31px 32px);border-left:44px solid #fff9c4;box-shadow:inset 3px 0 0 #e58a8a,0 2px 0 #e9dfcc,0 4px 0 #ded2bb,0 22px 40px rgba(60,40,15,.35)">
  <span class="tape" style="left:40%;top:-14px;transform:rotate(2deg)"></span>
- <div class="sec-title"><h2>Business Studies</h2><p>Think like a business owner</p></div>
+ <div class="sec-title" style="padding-right:150px"><h2>Business Studies</h2><p>Think like a business owner</p></div>
  <div class="busg">
   <a class="idx" href="https://mrsperkinsteacher.github.io/business/year11.html" style="transform:rotate(-1.5deg)"><span class="clipr"></span><p class="yr">YEAR 11 - PRELIMINARY</p><h3>Year 11</h3>
    <div class="road"><span>Nature of Business</span><i>&rarr;</i><span>Business Planning</span><i>&rarr;</i><span>Business Management</span></div>
@@ -285,8 +299,11 @@ footer{text-align:center;padding:0 20px 46px;color:#4a3418}
   <a class="idx" href="https://mrsperkinsteacher.github.io/business/year12.html" style="transform:rotate(1.2deg)"><span class="clipr"></span><p class="yr">YEAR 12 - HSC</p><h3>Year 12</h3>
    <div class="road"><span class="now">Operations - now</span><i>&rarr;</i><span>Marketing</span><i>&rarr;</i><span>Finance</span><i>&rarr;</i><span>Human Resources</span></div>
    <div class="tools"><em>Flashcards and leaderboard</em><em>Dot point finder</em><em>Operations playlist</em><em>HSC study tips</em><em>Look after yourself</em></div>
-   <img class="bear" src="/images/wk19.webp" alt="" style="width:74px;right:-14px;top:-40px;position:absolute"></a>
+   <img class="bear" src="/images/wk19.webp" alt="" style="width:74px;left:-30px;bottom:-34px;position:absolute"></a>
  </div>
+ <a class="sotw" href="https://mrsperkinsteacher.github.io/business/year12.html" aria-label="Student of the Week - Year 12 Business Studies"><svg viewBox="0 0 160 200"><path d="M52 110 L30 196 L55 180 L70 200 L80 120Z" fill="#892338"/><path d="M108 110 L130 196 L105 180 L90 200 L80 120Z" fill="#6b6420"/>
+<g transform="translate(80 78)"><circle cx="0" cy="-60" r="16" fill="#eca223" transform="rotate(0)"/><circle cx="0" cy="-60" r="16" fill="#ffc20e" transform="rotate(24)"/><circle cx="0" cy="-60" r="16" fill="#eca223" transform="rotate(48)"/><circle cx="0" cy="-60" r="16" fill="#ffc20e" transform="rotate(72)"/><circle cx="0" cy="-60" r="16" fill="#eca223" transform="rotate(96)"/><circle cx="0" cy="-60" r="16" fill="#ffc20e" transform="rotate(120)"/><circle cx="0" cy="-60" r="16" fill="#eca223" transform="rotate(144)"/><circle cx="0" cy="-60" r="16" fill="#ffc20e" transform="rotate(168)"/><circle cx="0" cy="-60" r="16" fill="#eca223" transform="rotate(192)"/><circle cx="0" cy="-60" r="16" fill="#ffc20e" transform="rotate(216)"/><circle cx="0" cy="-60" r="16" fill="#eca223" transform="rotate(240)"/><circle cx="0" cy="-60" r="16" fill="#ffc20e" transform="rotate(264)"/><circle cx="0" cy="-60" r="16" fill="#eca223" transform="rotate(288)"/><circle cx="0" cy="-60" r="16" fill="#ffc20e" transform="rotate(312)"/><circle cx="0" cy="-60" r="16" fill="#eca223" transform="rotate(336)"/><circle r="58" fill="#ffc20e"/><circle r="50" fill="#fffdf7" stroke="#b8912f" stroke-width="3" stroke-dasharray="4 4"/>
+<text y="-20" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="10" letter-spacing="1.5" fill="#892338">STUDENT</text><text y="-6" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="10" letter-spacing="1.5" fill="#892338">OF THE</text><text y="20" text-anchor="middle" font-family="DM Serif Display,serif" font-size="30" fill="#003146">Week</text><text y="36" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="8" letter-spacing="1" fill="#6b6420">BUSINESS</text></g></svg></a>
  <p class="busq">Every great business started as someone's idea - yours could be next.</p>
  <div class="tagrow"><span class="tl">For every subject</span>
    <a class="tag" href="/wellbeing/" style="--c:#892338"><small>WELLBEING</small><b>Look after yourself</b></a>
@@ -299,10 +316,11 @@ footer{text-align:center;padding:0 20px 46px;color:#4a3418}
 </div>
 
 <footer>
+ <img src="/images/scrap/geo-so-close.webp" alt="Geo says: You're actually so close." style="width:260px;transform:rotate(-2deg);filter:drop-shadow(0 6px 8px rgba(0,0,0,.2));margin-bottom:10px">
  <p class="enc" id="enc"></p>
  <a class="ticket" href="https://ilearn.gosford.spcc.nsw.edu.au/">BACK TO SCHOOL - iLEARN</a>
- <div class="foot"><span>Mrs Perkins</span><span>Last Updated Sun 15/11/26, 10:26pm (AEDT)</span></div>
- <p class="cr">Panda art by WondersArtist &middot; Koala art by MistysDigitals &middot; Paintings by <a href="https://www.etsy.com/shop/DelightfulDigiArt" target="_blank" rel="noopener">DelightfulDigiArt</a> (Whimsical Landscapes, Steam Punk Adventure, Rivers of Gold, White Cosmos, Surreal River, Mixed Media Newspaper)</p>
+ <div class="foot"><span>Mrs Perkins</span><span>Last Updated Sun 15/11/26, 10:33pm (AEDT)</span></div>
+ <p class="cr">Panda art by WondersArtist &middot; Koala art by MistysDigitals &middot; Paintings by <a href="https://www.etsy.com/shop/DelightfulDigiArt" target="_blank" rel="noopener">DelightfulDigiArt</a> (Whimsical Landscapes, Steam Punk Adventure, Rivers of Gold, White Cosmos, Surreal River, Mixed Media Newspaper) &middot; Geo the G.O.A.T. is Mrs Perkins' Geography mascot</p>
 </footer>
 <script>(function(){var L=["Small steps every lesson add up to big understanding.", "Curious minds make great geographers.", "You do not have to be perfect - just keep going.", "Ask the question. Someone else is wondering too.", "Every map started as a blank page.", "Your effort today is tomorrow's confidence.", "Look closer. Geography is everywhere you go.", "Be kind, work hard, and enjoy the journey.", "Mistakes are proof you are trying.", "Every expert was once a beginner.", "Big questions lead to big discoveries.", "Keep asking why - that is where the learning lives.", "Progress, not perfection.", "You are capable of more than you think.", "Take a breath, then take the next step.", "The world is your classroom.", "Hard work grows strong minds.", "Help someone else understand - you will learn it twice.", "Read the map, then make your own path.", "Today is a great day to learn something new.", "And we know that in all things God works for the good of those who love him. - Romans 8:28", "If you are faithful in little things, you will be faithful in large ones. - Luke 16:10", "Keep on asking, and you will receive what you ask for. Keep on seeking, and you will find. - Matthew 7:7", "For I know the plans I have for you, declares the Lord... plans to give you hope and a future. - Jeremiah 29:11", "Whatever you do, work at it with all your heart. - Colossians 3:23", "The earth is the Lord's, and everything in it. - Psalm 24:1"];var e=document.getElementById("enc");if(e)e.textContent=L[Math.floor(Math.random()*L.length)];})();</script>
 </body>
