@@ -84,38 +84,82 @@
  }
 </style>
 <style id="mp-trail-css">.mp-trail{margin:0 0 .6rem!important;padding:0!important;font-size:12px!important;line-height:1.5!important;letter-spacing:.02em!important;font-weight:400!important;text-transform:none!important;text-align:inherit;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;grid-column:1/-1;max-width:none}.mp-trail a{color:inherit!important;text-decoration:none!important;font:inherit!important}.mp-trail a:hover{text-decoration:underline!important}.mp-trail .mp-sep{margin:0 .45em}nav>.mp-trail{max-width:1100px;margin:0 auto!important;padding:.45rem 2rem 0!important}</style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;600;800&family=Caveat:wght@600&display=swap" rel="stylesheet" id="mp-s6-fonts">
+<style id="mp-s6">
+html,body{background:#fbf8f2!important}
+body{font-family:Inter,system-ui,sans-serif!important;color:#22303a}
+.s6wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+.s6trail{padding:12px 0 6px;font-size:12px;color:#6b5a2e}.s6trail a{color:inherit;text-decoration:none}.s6trail span{margin:0 .45em;opacity:.6}
+.s6hero{position:relative;min-height:400px;border-radius:4px;overflow:hidden;background:#fff;display:flex;align-items:center;border:1px solid #d9c48f}
+.s6art{position:absolute;inset:0;background:url(images/g23.webp) center 40%/cover}
+.s6hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(251,248,242,.97) 0,rgba(251,248,242,.9) 42%,rgba(251,248,242,0) 70%)}
+.s6t{position:relative;z-index:1;padding:40px 44px;max-width:560px}
+.s6k{font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#a07d24}
+.s6hero h1{font-family:"Playfair Display",Georgia,serif;font-weight:500;font-size:68px;line-height:1;margin:10px 0 12px;color:#22303a}
+.s6hero h1 em{color:#a07d24;font-style:italic}
+.s6hero h1::after{content:"";display:block;width:90px;height:2px;background:#b8912f;margin-top:16px}
+.s6lead{font-size:16px;color:#3c4a52}
+.s6btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.s6b{font-size:13px;font-weight:600;letter-spacing:.04em;text-decoration:none;padding:10px 18px;border:1px solid #b8912f;color:#22303a;background:rgba(255,255,255,.7)}
+.s6b.solid{background:#22303a;border-color:#22303a;color:#f4e3b5}
+.s6b:hover{background:#b8912f;color:#fff;border-color:#b8912f}
+.stage6-banner{background:transparent!important;border:0!important}
+.stage6-banner-inner{max-width:1100px!important;padding:20px 18px 0!important}
+.stage6-banner-text{background:#fff;border:1px solid #e6d7ad;border-left:4px solid #b8912f;padding:14px 18px;color:#3c4a52!important;font-size:14px}
+.stage6-banner-icon{display:none}
+.main{max-width:1100px!important}
+.stage-tabs{border-bottom:1px solid #d9c48f!important;justify-content:center;gap:8px!important}
+.stage-tab{font-family:"Playfair Display",Georgia,serif!important;font-size:20px!important;font-weight:500!important;color:#7a6a45!important}
+.stage-tab.active{color:#22303a!important;border-bottom-color:#b8912f!important}
+.stage-quote{background:transparent!important;border:0!important;text-align:center;font-size:26px!important;color:#22303a!important;padding:10px 20px 4px!important}
+.stage-quote::after{content:"";display:block;width:60px;height:2px;background:#b8912f;margin:14px auto 0}
+.stage-intro{text-align:center;color:#3c4a52!important}
+.focus-eyebrow,.info-box-eyebrow,.component-label{color:#a07d24!important;font-weight:800!important;letter-spacing:.2em!important}
+.focus-card,.info-box,.component-card{border:1px solid #e6d7ad!important;border-radius:4px!important;box-shadow:0 6px 18px rgba(160,125,36,.08)}
+.focus-card-top{background:#fff url(images/g20.webp) center/240% no-repeat!important;padding:62px 18px 12px!important;position:relative}
+.focus-card:nth-child(2) .focus-card-top{background-image:url(images/g29.webp)!important;background-position:30% 40%!important}
+.focus-card:nth-child(3) .focus-card-top{background-image:url(images/g3.webp)!important;background-position:70% 30%!important}
+.focus-card:nth-child(4) .focus-card-top{background-image:url(images/g23.webp)!important;background-position:20% 60%!important}
+.focus-card-top::before{content:"";position:absolute;left:0;right:0;bottom:0;height:72%;background:linear-gradient(0deg,rgba(255,255,255,.97) 30%,rgba(255,255,255,0))}
+.focus-card-label,.focus-card-title{position:relative;z-index:1}
+.focus-card-label{color:#a07d24!important;font-weight:800!important}
+.focus-card-title{color:#22303a!important;font-size:22px!important}
+.focus-card-hours{color:#a07d24!important}
+.focus-card-note{background:#fbf5e4!important;border-color:#e6d7ad!important;color:#5b4a1e!important}
+.info-box-title,.component-pct,.component-name{color:#22303a!important}
+.fieldwork-note{background:#fff!important;border:1px solid #e6d7ad;border-left:4px solid #b8912f}
+.hsc-box{background:#22303a!important;border-radius:4px!important;border-top:4px solid #b8912f}
+.hsc-box-title,.hsc-row-label{color:#e8c76a!important}
+.nesa-link{background:#22303a!important;border-radius:2px!important}
+.nesa-link:hover{background:#b8912f!important}
+.fe{margin:40px 0 10px;background:#fff;border:1px solid #e6d7ad;padding:30px 32px;position:relative;overflow:hidden}
+.fe::before{content:"";position:absolute;right:-60px;top:-40px;width:320px;height:320px;background:url(images/g29.webp) center/cover;opacity:.35;border-radius:50%}
+.fe>*{position:relative}
+.fe-k{font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#a07d24}
+.fe h2{font-family:"Playfair Display",Georgia,serif;font-weight:500;font-size:34px;margin:6px 0 6px;color:#22303a}
+.fe-intro{color:#3c4a52;margin-bottom:16px}
+.fe-row{display:grid;grid-template-columns:220px 30px 1fr;gap:8px;align-items:center;padding:12px 0;border-top:1px solid #efe4c6}
+.fe-from{font-family:"Playfair Display",Georgia,serif;font-size:19px;color:#22303a}
+.fe-arrow{color:#b8912f;font-size:20px}
+.fe-to{font-size:14px;color:#3c4a52}
+.fe-back{display:inline-block;margin-top:16px;font-size:13px;font-weight:600;color:#22303a;text-decoration:none;border-bottom:1px solid #b8912f}
+.s6ft{text-align:center;padding:30px 0 26px;background:transparent!important;color:#6b5a2e}
+.s6ft .enc{font-family:Caveat,cursive;font-size:28px;color:#a07d24;min-height:1.3em}
+.s6ft .nm{font-size:12px;opacity:.8}.s6ft .cr{font-size:11px;opacity:.6;margin-top:6px}.s6ft .cr a{color:inherit}
+@media(max-width:700px){.s6hero h1{font-size:46px}.s6t{padding:26px 22px}.s6hero::after{background:rgba(251,248,242,.88)}.fe{padding:22px}.fe-row{grid-template-columns:1fr;gap:2px}.fe-arrow{display:none}}
+</style>
 </head>
 <body>
-<nav><p class="mp-trail" style="color:rgb(255, 255, 255);opacity:0.85"><a href="https://mrsperkinsteacher.github.io/">Mrs Perkins home</a><span class="mp-sep">/</span><a href="https://mrsperkinsteacher.github.io/stage6geo/">Stage 6 Geography</a></p>
- <div class="nav-inner">
- <a class="nav-brand" href="/geography/index.html">Mrs Perkins Geography</a>
- <ul class="nav-links">
-      <li class="has-dropdown"><a href="#">Stage 5 Lessons</a><div class="dropdown"><div class="has-subdropdown"><a href="#">The Three Films Lesson</a><div class="subdropdown"><a href="/geography/films.html">Films</a><a href="/geography/lessons.html">Lessons</a><a href="/geography/resources.html">Resources</a></div></div></div></li>
-      <li><a href="/geography/elective.html">Stage 5 Elective</a></li>
-      <li><a href="/geography/stage6.html">Stage 6</a></li>
-      <li><a href="/geography/syllabus.html">Syllabus</a></li>
-      <li class="has-dropdown"><a href="/geography/sdgs.html">SDGs</a><div class="dropdown"><a href="/geography/sdgs.html">SDG Summary</a></div></li>
-      <li><a href="/geography/videos.html">Videos</a></li>
-      <li><a href="/geography/fun.html">Geography Fun</a></li>
-      <li class="has-dropdown">
-        <a href="/geography/sources.html">Sources</a>
-        <div class="dropdown">
-          <a href="/geography/thisweek.html">This Week in Geography</a>
-          <a href="/geography/sources.html">Geography Sources</a>
-        </div>
-      </li>
-      <li><a href="/geography/journey.html">Your Journey</a></li>
-      <li><a href="/geography/contact.html">Contact</a></li>
-    </ul>
- <button class="nav-hamburger" onclick="document.getElementById('mobileNav').classList.toggle('open')" aria-label="Menu"></button>
- </div>
- <div class="nav-accent"></div>
- <div class="nav-mobile" id="mobileNav">
-    <a href="#">Stage 5 Lessons</a><a class="mobile-sub" href="#">The Three Films Lesson</a><a class="mobile-subsub" href="/geography/films.html">Films</a><a class="mobile-subsub" href="/geography/lessons.html">Lessons</a><a class="mobile-subsub" href="/geography/resources.html">Resources</a>
-    <a href="/geography/elective.html">Stage 5 Elective</a><a href="/geography/stage6.html">Stage 6</a><a href="/geography/syllabus.html">Syllabus</a><a href="/geography/sdgs.html">SDGs</a><a href="/geography/videos.html">Videos</a><a href="/geography/fun.html">Geography Fun</a><a href="/geography/sources.html">Sources</a><a class="mobile-sub" href="/geography/thisweek.html">This Week in Geography</a><a class="mobile-sub" href="/geography/sources.html">Geography Sources</a><a href="/geography/journey.html">Your Journey</a><a href="/geography/contact.html">Contact</a>
+<div class="s6wrap"><p class="s6trail"><a href="https://mrsperkinsteacher.github.io/">Mrs Perkins home</a><span>/</span>Stage 6 Geography</p>
+<header class="s6hero">
+  <div class="s6art" role="img" aria-label="Gold and white painted tree"></div>
+  <div class="s6t">
+    <p class="s6k">Years 11-12 &nbsp;&middot;&nbsp; Geography 11-12 Syllabus</p>
+    <h1>Stage 6 <em>Geography</em></h1>
+    <p class="s6lead">What you will study in Year 11 and Year 12, how you are assessed, and what the HSC exam looks like.</p>
+    <div class="s6btns"><a class="s6b solid" href="https://mrsperkinsteacher.github.io/geography/syllabus.html">Syllabus and Expectations</a><a class="s6b" href="#from-elective">Coming from the Stage 5 Elective?</a></div>
   </div>
-</nav>
-
+</header></div>
 <div class="stage6-banner">
   <div class="stage6-banner-inner">
     <div class="stage6-banner-icon"></div>
@@ -353,9 +397,18 @@
 
   </div>
 
+
+  <section class="fe" id="from-elective">
+    <p class="fe-k">Coming from the Stage 5 Elective?</p>
+    <h2>Where each focus area leads</h2>
+    <p class="fe-intro">Each Stage 5 Elective focus area builds skills and ideas you will use again in Stage 6.</p>
+    <div class="fe-list"><div class="fe-row"><span class="fe-from">Extreme Environments</span><span class="fe-arrow">&rarr;</span><span class="fe-to">Earth's Natural Systems (Year 11)<br>Ecosystems and Global Biodiversity (Year 12)</span></div><div class="fe-row"><span class="fe-from">Geopolitics</span><span class="fe-arrow">&rarr;</span><span class="fe-to">Global Sustainability (Year 12)<br>People, Patterns and Processes (Year 11)</span></div><div class="fe-row"><span class="fe-from">Global Citizenship</span><span class="fe-arrow">&rarr;</span><span class="fe-to">Human-Environment Interactions (Year 11)<br>Global Sustainability (Year 12)</span></div><div class="fe-row"><span class="fe-from">Oceanography</span><span class="fe-arrow">&rarr;</span><span class="fe-to">Earth's Natural Systems (Year 11)<br>Ecosystems and Global Biodiversity (Year 12)</span></div><div class="fe-row"><span class="fe-from">Australia's Neighbours</span><span class="fe-arrow">&rarr;</span><span class="fe-to">People, Patterns and Processes (Year 11)<br>Global Sustainability (Year 12)</span></div><div class="fe-row"><span class="fe-from">Primary Production</span><span class="fe-arrow">&rarr;</span><span class="fe-to">Earth's Natural Systems (Year 11)<br>Ecosystems and Global Biodiversity (Year 12)</span></div></div>
+    <a class="fe-back" href="https://mrsperkinsteacher.github.io/stage5geo/elective/">&larr; Back to the Stage 5 Elective</a>
+  </section>
 </div>
 
-<footer><p>Mrs Perkins · Site for educational use only</p></footer>
+<footer class="s6ft"><p class="enc" id="enc"></p><p class="nm">Mrs Perkins &middot; Stage 6 Geography &middot; For educational use only</p><p class="cr">Artwork: Rivers of Gold by <a href="https://www.etsy.com/shop/DelightfulDigiArt" target="_blank" rel="noopener">DelightfulDigiArt</a></p></footer>
+<script>(function(){var L=["Small steps every lesson add up to big understanding.", "Curious minds make great geographers.", "You do not have to be perfect - just keep going.", "Ask the question. Someone else is wondering too.", "Every map started as a blank page.", "Your effort today is tomorrow's confidence.", "Look closer. Geography is everywhere you go.", "Be kind, work hard, and enjoy the journey.", "Mistakes are proof you are trying.", "Every expert was once a beginner.", "Big questions lead to big discoveries.", "Keep asking why - that is where the learning lives.", "Progress, not perfection.", "You are capable of more than you think.", "Take a breath, then take the next step.", "The world is your classroom.", "Hard work grows strong minds.", "Help someone else understand - you will learn it twice.", "Read the map, then make your own path.", "Today is a great day to learn something new.", "And we know that in all things God works for the good of those who love him. - Romans 8:28", "If you are faithful in little things, you will be faithful in large ones. - Luke 16:10", "Keep on asking, and you will receive what you ask for. Keep on seeking, and you will find. - Matthew 7:7", "For I know the plans I have for you, declares the Lord... plans to give you hope and a future. - Jeremiah 29:11", "Whatever you do, work at it with all your heart. - Colossians 3:23", "The earth is the Lord's, and everything in it. - Psalm 24:1"];var e=document.getElementById("enc");if(e)e.textContent=L[Math.floor(Math.random()*L.length)];})();</script>
 <script data-goatcounter="https://mrsperkinsgeography.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <script>
 function showPanel(id, btn){
