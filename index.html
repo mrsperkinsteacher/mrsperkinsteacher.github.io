@@ -25,7 +25,7 @@ a{color:inherit} h1,h2,h3{text-wrap:balance} p,li{text-wrap:pretty}
 .top{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:800;letter-spacing:.2em;color:#5b3f20;padding:0 6px 12px}
 .stamp{display:inline-block;border:2px solid #8b2f2f;color:#8b2f2f;border-radius:6px;padding:3px 10px;font:700 13px Inter,sans-serif;letter-spacing:.06em;transform:rotate(-3deg)}
 /* page */
-.page{position:relative;background:#fffdf7;border-radius:4px;box-shadow:0 2px 0 #e9dfcc,0 4px 0 #ded2bb,0 6px 0 #d2c4aa,0 22px 40px rgba(60,40,15,.35);padding:38px 40px 44px;margin:0 0 70px}
+.page{position:relative;background:#fffdf7;border-radius:4px;box-shadow:0 2px 0 #e9dfcc,0 4px 0 #ded2bb,0 6px 0 #d2c4aa,0 22px 40px rgba(60,40,15,.35);padding:30px 34px 32px;margin:0 0 44px}
 .page.lined{background-image:repeating-linear-gradient(#fffdf7 0 31px,#d9e7ef 31px 32px)}
 .page.grid{background-image:linear-gradient(rgba(84,172,185,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(84,172,185,.13) 1px,transparent 1px);background-size:26px 26px}
 .tape{position:absolute;width:120px;height:30px;background:rgba(255,194,14,.55);box-shadow:0 1px 2px rgba(0,0,0,.15);z-index:3}
@@ -37,31 +37,31 @@ a{color:inherit} h1,h2,h3{text-wrap:balance} p,li{text-wrap:pretty}
 .tabs a:hover{transform:translateX(5px)}
 /* hero */
 .hero{display:grid;grid-template-columns:1.05fr 1fr;gap:30px;align-items:center}
-.torn{position:relative;background:#fff;padding:34px 34px 30px;transform:rotate(-1.2deg);box-shadow:0 10px 24px rgba(0,0,0,.15);
+.torn{position:relative;background:#fff;padding:26px 30px 22px;transform:rotate(-1.2deg);box-shadow:0 10px 24px rgba(0,0,0,.15);
  clip-path:polygon(0 3%,4% 0,9% 2%,15% 0,22% 2%,30% 0,38% 2%,46% 0,55% 2%,63% 0,71% 2%,80% 0,88% 2%,95% 0,100% 3%,100% 97%,96% 100%,89% 98%,82% 100%,74% 98%,66% 100%,58% 98%,50% 100%,42% 98%,34% 100%,26% 98%,18% 100%,10% 98%,3% 100%,0 97%)}
 .torn small{font-weight:800;letter-spacing:.3em;font-size:12px;color:#a07d24}
-.torn h1{font:400 clamp(46px,6.4vw,82px)/.98 "DM Serif Display",serif;margin:10px 0 14px;color:#003146}
+.torn h1{font:400 clamp(42px,5.6vw,70px)/.98 "DM Serif Display",serif;margin:10px 0 14px;color:#003146}
 .mark{position:relative;font-family:"Permanent Marker",Caveat,cursive;color:#00645f;white-space:nowrap}
 .mark::after{content:"";position:absolute;left:-4%;right:-4%;bottom:6%;height:34%;background:rgba(255,194,14,.55);z-index:-1;transform:rotate(-2deg);border-radius:4px}
 .torn p{margin:0 0 10px;font-size:17px;color:#3c4a52;max-width:520px}
 .sig{font:700 34px Caveat,cursive;color:#892338;margin:0}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .chip{display:flex;align-items:baseline;gap:6px;background:#fff;border:2px dashed #b8912f;border-radius:30px;padding:5px 14px;font-size:13px;font-weight:600;transform:rotate(var(--r,0deg))}
-.chip b{font:400 24px "DM Serif Display",serif;color:#003146}
-.collage{position:relative;height:470px}
+.chip b{font:400 21px "DM Serif Display",serif;color:#003146}
+.collage{position:relative;height:420px}
 .pol{position:absolute;background:#fff;padding:10px 10px 38px;box-shadow:0 12px 24px rgba(0,0,0,.25);text-decoration:none;transition:transform .25s,z-index 0s;z-index:1}
 .pol img{display:block;width:100%;height:auto}
 .pol span{position:absolute;left:0;right:0;bottom:6px;text-align:center;font:700 22px Caveat,cursive;color:#22303a}
 .pol:hover{transform:rotate(0) scale(1.06)!important;z-index:5}
-.c1{left:2%;top:4%;width:46%;transform:rotate(-7deg)}
-.c2{left:50%;top:0;width:40%;transform:rotate(5deg)}
-.c3{left:12%;top:48%;width:42%;transform:rotate(4deg)}
-.c4{left:55%;top:45%;width:42%;transform:rotate(-5deg)}
+.c1{left:2%;top:0;width:38%;transform:rotate(-6deg)}
+.c2{left:52%;top:2%;width:38%;transform:rotate(5deg)}
+.c3{left:8%;top:52%;width:38%;transform:rotate(3deg)}
+.c4{left:56%;top:52%;width:38%;transform:rotate(-4deg)}
 .bear{position:absolute;z-index:6;transition:transform .3s}
 .bear:hover{transform:translateY(-10px) rotate(-4deg)}
 /* section titles */
-.sec-title{display:flex;align-items:end;gap:18px;flex-wrap:wrap;margin:0 0 22px}
-.sec-title h2{margin:0;font:400 clamp(44px,6vw,72px)/1 "DM Serif Display",serif;color:#003146}
+.sec-title{display:flex;align-items:end;gap:18px;flex-wrap:wrap;margin:0 0 18px}
+.sec-title h2{margin:0;font:400 clamp(40px,5vw,60px)/1 "DM Serif Display",serif;color:#003146}
 .sec-title p{margin:0 0 8px;font:700 26px/1.2 Caveat,cursive;color:#892338}
 /* geography collage */
 .geo{display:grid;grid-template-columns:repeat(12,1fr);gap:26px 22px;align-items:start}
@@ -82,6 +82,21 @@ a{color:inherit} h1,h2,h3{text-wrap:balance} p,li{text-wrap:pretty}
 .g-s6{grid-column:6/13;transform:rotate(-1.2deg)}
 .g-res{grid-column:1/8;transform:rotate(-1deg)}
 .g-jour{grid-column:8/13;transform:rotate(2deg);margin-top:20px}
+.row4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:stretch}
+.st4{display:flex;flex-direction:column;padding:10px}
+.st4 > img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.st4 .cb{padding:10px 4px 4px;display:flex;flex-direction:column;flex:1}
+.st4 .yr{margin:0;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--c)}
+.st4 h3{margin:2px 0 6px;font:400 30px/1 "DM Serif Display",serif;color:#003146}
+.st4 ul{margin:0 0 8px;padding-left:18px;font-size:13.5px;line-height:1.4}
+.st4 .inside{margin-top:auto;align-self:flex-start}
+.st4.dark{background:#2b2018;color:#f3e2c8} .st4.dark h3{color:#fff}
+.st4 .tix i{font-size:11.5px;padding:3px 8px}
+.halves{display:grid;grid-template-columns:1fr 1fr;gap:4px} .halves img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block;max-height:none}
+.six .halves img{aspect-ratio:auto;height:100%} .six .halves{aspect-ratio:4/3;overflow:hidden}
+.mini{margin:0 0 6px;font-size:12.5px;line-height:1.4} .mini b{color:#003146}
+.row2{display:grid;grid-template-columns:2.2fr 1fr;gap:22px;margin-top:26px;align-items:start}
+.stack{display:grid;gap:18px}
 /* elective tickets */
 .el{display:grid;grid-template-columns:150px 1fr;background:#2b2018;color:#f3e2c8;overflow:hidden}
 .el img{width:100%;height:100%;object-fit:cover}
@@ -119,7 +134,7 @@ a{color:inherit} h1,h2,h3{text-wrap:balance} p,li{text-wrap:pretty}
 .rivers .rt{font:800 11px Inter,sans-serif;letter-spacing:.16em;fill:#003146}
 .flow{animation:flow 1.8s linear infinite} @keyframes flow{to{stroke-dashoffset:-36}}
 @media (prefers-reduced-motion:reduce){.flow{animation:none}}
-.rivers.feat{margin-top:44px;transform:rotate(-.4deg);background:linear-gradient(90deg,rgba(0,49,70,.92),rgba(0,49,70,.78) 55%,rgba(0,49,70,.55)),url(/images/scrap/river.webp) center 40%/cover;color:#fff;padding:30px 34px 22px;border:6px solid #fff}
+.rivers.feat{margin-top:26px;transform:rotate(-.4deg);background:linear-gradient(90deg,rgba(0,49,70,.92),rgba(0,49,70,.78) 55%,rgba(0,49,70,.55)),url(/images/scrap/river.webp) center 40%/cover;color:#fff;padding:22px 30px 16px;border:6px solid #fff}
 .rivers.feat h3{color:#fff;font-size:clamp(38px,5vw,56px)}
 .rivers.feat .fk{margin:0;font:800 12px Inter,sans-serif;letter-spacing:.3em;color:#ffc20e}
 .rivers.feat .fs{margin:6px 0 0;max-width:640px;color:#d9ecf0;font-size:16px}
@@ -131,10 +146,10 @@ a{color:inherit} h1,h2,h3{text-wrap:balance} p,li{text-wrap:pretty}
 @media (prefers-reduced-motion:reduce){.burst{animation:none}}
 /* thread between pages */
 .thread{position:relative;height:0}
-.thread svg{position:absolute;left:50%;top:-74px;transform:translateX(-50%);width:200px;height:78px;overflow:visible}
+.thread svg{position:absolute;left:50%;top:-48px;transform:translateX(-50%);width:120px;height:50px;overflow:visible}
 /* business */
 .bus .legal{background:#fff9c4;background-image:repeating-linear-gradient(#fff9c4 0 29px,#b8d4e6 29px 30px);border-left:0;position:relative}
-.busg{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:6px}
+.busg{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:4px}
 .idx{position:relative;display:block;text-decoration:none;background:#fff;padding:24px 24px 22px;box-shadow:0 12px 24px rgba(0,0,0,.18);transition:transform .25s}
 .idx:hover{transform:rotate(0) translateY(-6px)!important}
 .idx .clipr{position:absolute;top:-16px;left:30px;width:22px;height:56px;border:4px solid #8a95a0;border-radius:12px;border-bottom-color:transparent;z-index:2}
@@ -145,7 +160,10 @@ a{color:inherit} h1,h2,h3{text-wrap:balance} p,li{text-wrap:pretty}
 .road span.now{background:#6b6420;color:#fff}
 .road i{font-style:normal;color:#6b6420;font-weight:800}
 .tools{display:flex;flex-wrap:wrap;gap:6px} .tools em{font-style:normal;font-size:12.5px;font-weight:600;border:2px dashed #b8b06a;border-radius:6px;padding:3px 9px}
-.busq{text-align:center;margin:30px 0 0;font:700 30px Caveat,cursive;color:#6b6420}
+.busq{text-align:center;margin:20px 0 0;font:700 30px Caveat,cursive;color:#6b6420}
+.tagrow{display:flex;justify-content:center;align-items:center;gap:22px;flex-wrap:wrap;margin-top:26px;padding-top:22px;border-top:3px dashed #c9b26a}
+.tagrow .tl{font:400 30px "DM Serif Display",serif;color:#003146;margin-right:6px}
+.tagrow .tag{width:190px;padding:22px 14px 14px}
 /* cls envelope */
 .env{position:relative;max-width:440px;margin:0 auto;aspect-ratio:16/9;background:#efe2f4;box-shadow:0 14px 28px rgba(0,0,0,.2);overflow:hidden;display:grid;place-items:center;text-align:center}
 .env::before{content:"";position:absolute;left:0;right:0;top:0;height:60%;background:#e3d0ec;clip-path:polygon(0 0,100% 0,50% 100%)}
@@ -168,6 +186,7 @@ footer{text-align:center;padding:0 20px 46px;color:#4a3418}
 .foot{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;align-items:center;margin:16px 0 8px;font-size:13px}
 .cr{font-size:11.5px;opacity:.85;max-width:900px;margin:8px auto 0} .cr a{color:inherit}
 @media(max-width:980px){
+ .row4{grid-template-columns:1fr 1fr} .row2{grid-template-columns:1fr}
  .hero{grid-template-columns:1fr} .collage{height:420px} .tabs{display:none}
  .geo{grid-template-columns:1fr 1fr}
  .g-s4,.g-s4n,.g-s5,.g-s5n,.g-syl,.g-el,.g-s6,.g-res,.g-jour{grid-column:auto;margin-top:0}
@@ -176,13 +195,14 @@ footer{text-align:center;padding:0 20px 46px;color:#4a3418}
 }
 @media(max-width:620px){
  .page{padding:28px 18px 32px} .geo{grid-template-columns:1fr} .collage{height:330px}
+ .row4{grid-template-columns:1fr}
  .s6,.clip,.el{grid-template-columns:1fr} .el img{height:150px} .clip ul{columns:1}
 }
 </style>
 </head>
 <body>
 <div class="wrap">
-<div class="top"><span>MRS PERKINS TEACHER</span><span class="stamp">Last Updated Sun 15/11/26, 10:15pm</span></div>
+<div class="top"><span>MRS PERKINS TEACHER</span><span class="stamp">Last Updated Sun 15/11/26, 10:26pm</span></div>
 
 <!-- ============ COVER PAGE ============ -->
 <section class="page grid" id="top">
@@ -190,22 +210,22 @@ footer{text-align:center;padding:0 20px 46px;color:#4a3418}
  <nav class="tabs" aria-label="Jump to a subject">
   <a href="#geography" style="background:#00645f">Geography</a>
   <a href="#business" style="background:#6b6420">Business</a>
-  <a href="#every" style="background:#892338">Every subject</a>
+  <a href="#business" style="background:#892338">Every subject</a>
  </nav>
  <div class="hero">
   <div>
    <div class="torn">
     <small>WELCOME TO</small>
-    <h1><span class="mark">your</span> study space</h1>
-    <p>Everything I have made to help you learn - Geography, Business Studies and more - all in one scrapbook. Flip to a page and dive in.</p>
+    <h1><span class="mark">your</span> extra revision space</h1>
+    <p>Extra revision, practice and resources to back up what we do in class - Geography and Business Studies, all in one scrapbook. Flip to a page and dive in.</p>
     <p class="sig">Mrs Perkins</p>
    </div>
    <div class="chips">
-    <span class="chip" style="--r:-2deg"><b>5</b> Geography stages</span>
+    <span class="chip" style="--r:-2deg"><b>Geography</b> Stage 3 to Year 12</span>
     <span class="chip" style="--r:1.5deg"><b>4</b> rivers of big ideas</span>
     <span class="chip" style="--r:-1deg"><b>28</b> free news sources</span>
     <span class="chip" style="--r:2deg"><b>17</b> SDGs</span>
-    <span class="chip" style="--r:-1.5deg"><b>2</b> years of Business</span>
+    <span class="chip" style="--r:-1.5deg"><b>Business Studies</b> Year 11 and Year 12</span>
    </div>
   </div>
   <div class="collage">
@@ -222,7 +242,7 @@ footer{text-align:center;padding:0 20px 46px;color:#4a3418}
   <a class="rivers feat" href="https://mrsperkinsteacher.github.io/geography/pathways.html">
    <span class="tape str" style="left:46%;top:-14px;transform:rotate(-2deg)"></span>
    <span class="burst">START<br>HERE</span><div class="lab"><div><p class="fk">THE BIG PICTURE</p><h3>How it all links</h3><p class="fs">Four rivers of big ideas flow from Middle School to the HSC. See every unit, the SDGs it connects to, places to explore and the skills you build.</p></div><span class="go">Follow the rivers &rarr;</span></div>
-   <svg viewBox="0 0 1000 150" aria-label="Four coloured rivers running from Stage 3 to Year 12">
+   <svg viewBox="0 0 1000 150" style="max-height:120px" aria-label="Four coloured rivers running from Stage 3 to Year 12">
     <text x="40" y="14" class="rt">STAGE 3</text><text x="220" y="14" class="rt">STAGE 4</text><text x="400" y="14" class="rt">STAGE 5</text><text x="575" y="14" class="rt">ELECTIVE</text><text x="760" y="14" class="rt">YEAR 11</text><text x="920" y="14" class="rt">YEAR 12</text>
     <path d="M20 38 C 120 24, 160 52, 260 38 S 420 24, 500 38 S 660 52, 760 38 S 900 24, 990 38" fill="none" stroke="#d55a1f" stroke-width="9" stroke-linecap="round" stroke-opacity=".9"/><path class="flow" d="M20 38 C 120 24, 160 52, 260 38 S 420 24, 500 38 S 660 52, 760 38 S 900 24, 990 38" fill="none" stroke="#fff" stroke-width="2.2" stroke-dasharray="2 16" stroke-linecap="round"/><circle cx="60" cy="38" r="7" fill="#fff" stroke="#d55a1f" stroke-width="4"/><circle cx="245" cy="38" r="7" fill="#fff" stroke="#d55a1f" stroke-width="4"/><circle cx="425" cy="38" r="7" fill="#fff" stroke="#d55a1f" stroke-width="4"/><circle cx="600" cy="38" r="7" fill="#fff" stroke="#d55a1f" stroke-width="4"/><circle cx="785" cy="38" r="7" fill="#fff" stroke="#d55a1f" stroke-width="4"/><circle cx="945" cy="38" r="7" fill="#fff" stroke="#d55a1f" stroke-width="4"/><path d="M20 68 C 120 54, 160 82, 260 68 S 420 54, 500 68 S 660 82, 760 68 S 900 54, 990 68" fill="none" stroke="#892338" stroke-width="9" stroke-linecap="round" stroke-opacity=".9"/><path class="flow" d="M20 68 C 120 54, 160 82, 260 68 S 420 54, 500 68 S 660 82, 760 68 S 900 54, 990 68" fill="none" stroke="#fff" stroke-width="2.2" stroke-dasharray="2 16" stroke-linecap="round"/><circle cx="60" cy="68" r="7" fill="#fff" stroke="#892338" stroke-width="4"/><circle cx="245" cy="68" r="7" fill="#fff" stroke="#892338" stroke-width="4"/><circle cx="425" cy="68" r="7" fill="#fff" stroke="#892338" stroke-width="4"/><circle cx="600" cy="68" r="7" fill="#fff" stroke="#892338" stroke-width="4"/><circle cx="785" cy="68" r="7" fill="#fff" stroke="#892338" stroke-width="4"/><circle cx="945" cy="68" r="7" fill="#fff" stroke="#892338" stroke-width="4"/><path d="M20 98 C 120 84, 160 112, 260 98 S 420 84, 500 98 S 660 112, 760 98 S 900 84, 990 98" fill="none" stroke="#00645f" stroke-width="9" stroke-linecap="round" stroke-opacity=".9"/><path class="flow" d="M20 98 C 120 84, 160 112, 260 98 S 420 84, 500 98 S 660 112, 760 98 S 900 84, 990 98" fill="none" stroke="#fff" stroke-width="2.2" stroke-dasharray="2 16" stroke-linecap="round"/><circle cx="60" cy="98" r="7" fill="#fff" stroke="#00645f" stroke-width="4"/><circle cx="245" cy="98" r="7" fill="#fff" stroke="#00645f" stroke-width="4"/><circle cx="425" cy="98" r="7" fill="#fff" stroke="#00645f" stroke-width="4"/><circle cx="600" cy="98" r="7" fill="#fff" stroke="#00645f" stroke-width="4"/><circle cx="785" cy="98" r="7" fill="#fff" stroke="#00645f" stroke-width="4"/><circle cx="945" cy="98" r="7" fill="#fff" stroke="#00645f" stroke-width="4"/><path d="M20 128 C 120 114, 160 142, 260 128 S 420 114, 500 128 S 660 142, 760 128 S 900 114, 990 128" fill="none" stroke="#1f8ea3" stroke-width="9" stroke-linecap="round" stroke-opacity=".9"/><path class="flow" d="M20 128 C 120 114, 160 142, 260 128 S 420 114, 500 128 S 660 142, 760 128 S 900 114, 990 128" fill="none" stroke="#fff" stroke-width="2.2" stroke-dasharray="2 16" stroke-linecap="round"/><circle cx="60" cy="128" r="7" fill="#fff" stroke="#1f8ea3" stroke-width="4"/><circle cx="245" cy="128" r="7" fill="#fff" stroke="#1f8ea3" stroke-width="4"/><circle cx="425" cy="128" r="7" fill="#fff" stroke="#1f8ea3" stroke-width="4"/><circle cx="600" cy="128" r="7" fill="#fff" stroke="#1f8ea3" stroke-width="4"/><circle cx="785" cy="128" r="7" fill="#fff" stroke="#1f8ea3" stroke-width="4"/><circle cx="945" cy="128" r="7" fill="#fff" stroke="#1f8ea3" stroke-width="4"/>
    </svg>
@@ -236,31 +256,19 @@ footer{text-align:center;padding:0 20px 46px;color:#4a3418}
  <span class="tape g" style="left:6%;top:-14px;transform:rotate(-4deg)"></span>
  <span class="tape" style="right:8%;top:-12px;transform:rotate(5deg)"></span>
  <div class="sec-title"><h2>Geography</h2><p>From Middle School to the HSC - every unit flows into the next</p></div>
- <div class="geo">
-  <a class="card snap g-s4" href="https://mrsperkinsteacher.github.io/stage4geo/" style="--c:#1f8ea3"><img src="/images/scrap/s4-water.webp" alt="Painted river gorge"><p class="yr">Years 7-8</p><h3>Stage 4</h3></a>
-  <div class="sticky b g-s4n"><h4>Inside Stage 4</h4><ul><li>Landscapes and landforms</li><li>Liveability of places</li><li>Water in the world</li><li>Interconnections and trade</li></ul><span class="inside">Lessons + revision slideshows</span></div>
-  <a class="card snap g-s5" href="https://mrsperkinsteacher.github.io/stage5geo/" style="--c:#00645f"><img src="/images/scrap/s5-cp.webp" alt="Painted hillside town"><p class="yr">Years 9-10</p><h3>Stage 5</h3></a>
-  <div class="sticky g g-s5n"><h4>Inside Stage 5</h4><ul><li>Biomes and sustainable agriculture</li><li>Changing places</li><li>Environmental change and management</li><li>Human wellbeing</li></ul><span class="inside">Weekly lessons + tasks</span></div>
-  <a class="card sticky p g-syl" href="https://mrsperkinsteacher.github.io/geography/syllabus.html" style="text-decoration:none"><h4>Syllabus and Expectations</h4><p style="margin:0">What you study, what is expected and how you are assessed - every stage.</p></a>
-
-
-  <a class="card el g-el" href="https://mrsperkinsteacher.github.io/stage5geo/elective/"><img src="/images/scrap/el-a.webp" alt="Steampunk balloon over a city"><div class="b"><p class="yr">YEARS 9-10 - AN EXTRA CHOICE</p><h3>Stage 5 Elective</h3>
-   <div class="tix"><i style="--r:-2deg">Extreme environments</i><i style="--r:1deg">Geopolitics</i><i style="--r:-1deg">Global citizenship</i><i style="--r:2deg">Oceanography</i><i style="--r:-1.5deg">Australia's neighbours</i><i style="--r:1deg">Primary production</i></div>
-   <p class="lead">Six adventures - and every one leads into Stage 6</p></div></a>
-
-  <a class="card s6 g-s6" href="https://mrsperkinsteacher.github.io/stage6geo/">
-   <div class="top6"><b>Stage 6</b><span>Years 11-12 - where Geography leads</span></div>
-   <div class="y11"><p class="yr">YEAR 11 - PRELIMINARY</p><h3>Build your toolkit</h3><ol><li>Earth's Natural Systems</li><li>People, Patterns and Processes</li><li>Human-Environment Interactions</li><li>Geographical Investigation</li></ol></div>
-   <div class="y12"><p class="yr">YEAR 12 - HSC</p><h3>Bring it together</h3><ol><li>Global Sustainability</li><li>Rural and Urban Places</li><li>Ecosystems and Global Biodiversity</li></ol><p style="margin:10px 0 0;font:700 20px Caveat,cursive;color:#5d7f95">plus the HSC exam at a glance</p></div>
-  </a>
-
-  <a class="card clip g-res" href="https://mrsperkinsteacher.github.io/geography/"><img src="/images/scrap/news.webp" alt="Mixed media newspaper collage"><div><p class="k">READ ALL ABOUT IT</p><div class="mast">Geography Resources</div>
+ <div class="row4">
+  <a class="card st4" href="https://mrsperkinsteacher.github.io/stage4geo/" style="--c:#1f8ea3;transform:rotate(-1.5deg)"><img src="/images/scrap/s4-water.webp" alt="Painted river gorge"><div class="cb"><p class="yr">Years 7-8</p><h3>Stage 4</h3><ul><li>Landscapes and landforms</li><li>Liveability of places</li><li>Water in the world</li><li>Interconnections and trade</li></ul><span class="inside">Lessons + revision slideshows</span></div></a>
+  <a class="card st4" href="https://mrsperkinsteacher.github.io/stage5geo/" style="--c:#00645f;transform:rotate(1.2deg)"><img src="/images/scrap/s5-cp.webp" alt="Painted hillside town"><div class="cb"><p class="yr">Years 9-10</p><h3>Stage 5</h3><ul><li>Biomes and sustainable agriculture</li><li>Changing places</li><li>Environmental change and management</li><li>Human wellbeing</li></ul><span class="inside">Weekly lessons + tasks</span></div></a>
+  <a class="card st4 dark" href="https://mrsperkinsteacher.github.io/stage5geo/elective/" style="--c:#e9b44c;transform:rotate(-1deg)"><img src="/images/scrap/el-a.webp" alt="Steampunk balloon over a city" style="aspect-ratio:4/3;object-fit:cover"><div class="cb"><p class="yr">Years 9-10 - extra choice</p><h3>Elective</h3><div class="tix"><i style="--r:-2deg">Extreme environments</i><i style="--r:1deg">Geopolitics</i><i style="--r:-1deg">Global citizenship</i><i style="--r:2deg">Oceanography</i><i style="--r:-1.5deg">Australia's neighbours</i><i style="--r:1deg">Primary production</i></div></div></a>
+  <a class="card st4 six" href="https://mrsperkinsteacher.github.io/stage6geo/" style="--c:#a07d24;transform:rotate(1.4deg)"><div class="halves"><img src="/images/scrap/s6-gold.webp" alt="Gold tree painting"><img src="/images/scrap/s6-white.webp" alt="White cosmos flowers"></div><div class="cb"><p class="yr">Years 11-12</p><h3>Stage 6</h3><p class="mini"><b>Year 11:</b> Earth's Natural Systems, People Patterns and Processes, Human-Environment Interactions, Geographical Investigation</p><p class="mini"><b>Year 12:</b> Global Sustainability, Rural and Urban Places, Ecosystems and Global Biodiversity</p></div></a>
+ </div>
+ <div class="row2">
+  <a class="card clip" href="https://mrsperkinsteacher.github.io/geography/" style="transform:rotate(-.8deg)"><img src="/images/scrap/news.webp" alt="Mixed media newspaper collage"><div><p class="k">READ ALL ABOUT IT</p><div class="mast">Geography Resources</div>
    <ul><li><b>This Week</b> - news with a geography twist</li><li><b>Videos</b> - skills and study playlists</li><li><b>Sources</b> - 28 free, trusted sites</li><li><b>SDGs</b> - all 17 goals</li><li><b>The Three Films</b> - choose your film</li><li><b>Geography Fun</b> - games, maps, records</li></ul></div></a>
-
-  <a class="card sticky g-jour" href="https://mrsperkinsteacher.github.io/geography/journey.html" style="text-decoration:none;background:#fff59a">
-   <h4>Your Geography Journey</h4><p style="margin:0 0 6px;padding-right:30px">You belong here. Where you are on the river, how to learn well, and how to go further.</p>
-   <img class="bear" src="/images/wp26.webp" alt="" style="width:70px;right:-30px;bottom:-50px;position:absolute">
-  </a>
+  <div class="stack">
+   <a class="card sticky p" href="https://mrsperkinsteacher.github.io/geography/syllabus.html" style="text-decoration:none;transform:rotate(2deg)"><h4>Syllabus and Expectations</h4><p style="margin:0">What you study, what is expected and how you are assessed - every stage.</p></a>
+   <a class="card sticky" href="https://mrsperkinsteacher.github.io/geography/journey.html" style="text-decoration:none;background:#fff59a;transform:rotate(-1.5deg)"><h4>Your Geography Journey</h4><p style="margin:0;padding-right:40px">You belong here - and how to learn well.</p><img class="bear" src="/images/wp26.webp" alt="" style="width:64px;right:-14px;bottom:-22px;position:absolute"></a>
+  </div>
  </div>
 </section>
 
@@ -280,28 +288,20 @@ footer{text-align:center;padding:0 20px 46px;color:#4a3418}
    <img class="bear" src="/images/wk19.webp" alt="" style="width:74px;right:-14px;top:-40px;position:absolute"></a>
  </div>
  <p class="busq">Every great business started as someone's idea - yours could be next.</p>
-</section>
-
-<div class="thread" aria-hidden="true"><svg viewBox="0 0 200 78"><path d="M100 0 C 40 20, 160 40, 100 78" fill="none" stroke="#b0365a" stroke-width="3" stroke-dasharray="8 6"/><circle cx="100" cy="39" r="6" fill="#ffc20e"/></svg></div>
-
-<!-- ============ CLS + EVERY SUBJECT ============ -->
-<section class="page grid" id="every-page">
- <span class="tape p" style="left:12%;top:-14px;transform:rotate(-5deg)"></span>
- <div id="every">
-  <div class="sec-title" style="justify-content:center;text-align:center"><h2 style="font-size:clamp(36px,5vw,54px)">For every subject</h2></div>
-  <div class="tags">
+ <div class="tagrow"><span class="tl">For every subject</span>
    <a class="tag" href="/wellbeing/" style="--c:#892338"><small>WELLBEING</small><b>Look after yourself</b></a>
    <a class="tag" href="/writinghelp/" style="--c:#00645f"><small>BY SUBJECT</small><b>Writing Help</b></a>
    <a class="tag" href="/contact/" style="--c:#1f8ea3"><small>QUESTIONS</small><b>Contact me</b></a>
-  </div>
  </div>
 </section>
+
+
 </div>
 
 <footer>
  <p class="enc" id="enc"></p>
  <a class="ticket" href="https://ilearn.gosford.spcc.nsw.edu.au/">BACK TO SCHOOL - iLEARN</a>
- <div class="foot"><span>Mrs Perkins</span><span>Last Updated Sun 15/11/26, 10:15pm (AEDT)</span></div>
+ <div class="foot"><span>Mrs Perkins</span><span>Last Updated Sun 15/11/26, 10:26pm (AEDT)</span></div>
  <p class="cr">Panda art by WondersArtist &middot; Koala art by MistysDigitals &middot; Paintings by <a href="https://www.etsy.com/shop/DelightfulDigiArt" target="_blank" rel="noopener">DelightfulDigiArt</a> (Whimsical Landscapes, Steam Punk Adventure, Rivers of Gold, White Cosmos, Surreal River, Mixed Media Newspaper)</p>
 </footer>
 <script>(function(){var L=["Small steps every lesson add up to big understanding.", "Curious minds make great geographers.", "You do not have to be perfect - just keep going.", "Ask the question. Someone else is wondering too.", "Every map started as a blank page.", "Your effort today is tomorrow's confidence.", "Look closer. Geography is everywhere you go.", "Be kind, work hard, and enjoy the journey.", "Mistakes are proof you are trying.", "Every expert was once a beginner.", "Big questions lead to big discoveries.", "Keep asking why - that is where the learning lives.", "Progress, not perfection.", "You are capable of more than you think.", "Take a breath, then take the next step.", "The world is your classroom.", "Hard work grows strong minds.", "Help someone else understand - you will learn it twice.", "Read the map, then make your own path.", "Today is a great day to learn something new.", "And we know that in all things God works for the good of those who love him. - Romans 8:28", "If you are faithful in little things, you will be faithful in large ones. - Luke 16:10", "Keep on asking, and you will receive what you ask for. Keep on seeking, and you will find. - Matthew 7:7", "For I know the plans I have for you, declares the Lord... plans to give you hope and a future. - Jeremiah 29:11", "Whatever you do, work at it with all your heart. - Colossians 3:23", "The earth is the Lord's, and everything in it. - Psalm 24:1"];var e=document.getElementById("enc");if(e)e.textContent=L[Math.floor(Math.random()*L.length)];})();</script>
